@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import DrinkList from "./Drinks/DrinkList"
-import CabinetList from "./Cabinet/CabinetList"
+// import CabinetList from "./Cabinet/CabinetList"
 import "./index.css"
 
 class App extends Component {
