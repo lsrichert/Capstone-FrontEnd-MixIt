@@ -41,6 +41,7 @@ addDrink = (drink) => {
     .then(DrinkList => {
         this.setState({ drinks: DrinkList})
     })
+    console.log("newObject", newObject)
 
 }
 // I need to build the form for the user to add a new drink

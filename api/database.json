@@ -46,6 +46,13 @@
       "instructions": "Pour over ice and stir",
       "userId": 1,
       "id": 5
+    },
+    {
+      "DrinkName": "any drink",
+      "DrinkLiquor": "any liquor",
+      "DrinkMixer": "any mixer",
+      "DrinkInstructions": "mix",
+      "id": 6
     }
   ]
 }
