@@ -23,14 +23,32 @@ const Database = Object.create({}, {
 
     addDrink: {
         value: (newObject) => {
+            // Here I am adding a drink to my database or POSTING
             return fetch("http://localhost:5002/drinks", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(newObject)
             })
+            // Then I need to return this fetch after my new drink is added
             .then(() => {
                 return fetch("http://localhost:5002/drinks")
             })
+            // Here, I am setting the new state with my new drink
+            .then(a => a.json())
+        }
+    },
+
+    deleteDrink: {
+        value: (drinkId) => {
+            // This code actually deletes the drink you want to delete
+            return fetch(`http://localhost:5002/drinks/${drinkId}`, {
+                method: "DELETE"
+            })
+            // When the delete is finished, return this fetch 
+            .then(() => {
+                return fetch("http://localhost:5002/drinks")
+            })
+            // Once the new list of drinks is retrieved, set the new state
             .then(a => a.json())
         }
     }

@@ -37,7 +37,7 @@ addDrink = (drink) => {
         DrinkLiquor: this.state.DrinkLiquor,
         DrinkMixer: this.state.DrinkMixer,
         DrinkInstructions: this.state.DrinkInstructions,
-        // userId: Database.getIdOfCurrentUser()
+        userId: Database.getIdOfCurrentUser()
     }
     Database.addDrink(newObject)
     .then(DrinkList => {
@@ -46,6 +46,12 @@ addDrink = (drink) => {
     console.log("newObject", newObject)
 
 }
+deleteDrink = (drinkId) => {
+    Database.deleteDrink(drinkId)
+    // console.log("drinkId", drinkId)
+        .then(deletedDrink => this.setState({ drinks: deletedDrink }))
+}
+
 handleEdit = (drink) => {
     drink.preventDefault()
     fetch(`http://localhost:5002/drinks/${this.state.drinkToEdit.id}`, {
@@ -63,6 +69,7 @@ handleEdit = (drink) => {
 
         })
 }
+
 EditDrink = (drinkId) => {
     console.log("drinkId", drinkId)
     fetch(`http://localhost:5002/drinks/${drinkId}`)
@@ -70,7 +77,9 @@ EditDrink = (drinkId) => {
     .then(DrinkList => {
         drinkToEdit: DrinkList
     })
+    
 }
+
 // I need to build the form for the user to add a new drink
     render() {
         return (
@@ -120,7 +129,9 @@ EditDrink = (drinkId) => {
                 {
                     this.state.drinks.map(drink =>
                         <Drink key={drink.id} drink={drink}
-                            EditDrink={this.EditDrink} drink={drink} />
+                            EditDrink={this.EditDrink} drink={drink} 
+                            deleteDrink={this.deleteDrink} drink={drink}
+/>
                     )
                 }
 

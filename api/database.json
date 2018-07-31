@@ -29,7 +29,7 @@
       "id": 2
     },
     {
-      "DrinkName": "Cathy's Cosmo",
+      "DrinkName": "Cosmo",
       "DrinkLiquor": "1 1/2 oz Citron Vodka, 1/2 oz Cointreau",
       "DrinkMixer": "1 oz cranberry juice, 1/2 oz lime juice",
       "DrinkInstructions": "Mix in shaker and strain into martini glass",
@@ -51,29 +51,6 @@
       "DrinkInstructions": "Pour over ice and stir",
       "userId": 1,
       "id": 5
-    },
-    {
-      "DrinkName": "gin and tonic",
-      "DrinkLiquor": "gin",
-      "DrinkMixer": "tonic",
-      "DrinkInstructions": "mix",
-      "userId": 2,
-      "id": 6
-    },
-    {
-      "DrinkName": "a drink",
-      "DrinkLiquor": "rum",
-      "DrinkMixer": "any mixer",
-      "DrinkInstructions": "mix",
-      "userId": 2,
-      "id": 7
-    },
-    {
-      "DrinkName": "a drink",
-      "DrinkLiquor": "any liquor",
-      "DrinkMixer": "any mixer",
-      "DrinkInstructions": "mix",
-      "id": 8
     }
   ]
 }
