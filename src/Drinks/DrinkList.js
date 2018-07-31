@@ -36,7 +36,7 @@ addDrink = (drink) => {
         DrinkLiquor: this.state.DrinkLiquor,
         DrinkMixer: this.state.DrinkMixer,
         DrinkInstructions: this.state.DrinkInstructions,
-        // userId: Database.getIdOfCurrentUser()
+        userId: Database.getIdOfCurrentUser()
     }
     Database.addDrink(newObject)
     .then(DrinkList => {

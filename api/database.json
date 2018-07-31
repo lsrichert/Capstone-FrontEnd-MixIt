@@ -1,9 +1,14 @@
 {
   "users": [
     {
-      "name": "test",
+      "userName": "test",
       "email": "test@test.com",
       "id": 1
+    },
+    {
+      "userName": "Joe",
+      "email": "joe@joe.com",
+      "id": 2
     }
   ],
   "drinks": [

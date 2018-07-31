@@ -6,7 +6,7 @@ export default class Login extends Component {
         userName: " ",
         email: " "
     }
-
+// This will update state whenever an input field is edited
     handleFieldChange = (evt) => {
         const stateToChange = {}
         stateToChange[evt.target.id] = evt.target.value
@@ -15,6 +15,8 @@ export default class Login extends Component {
 
     handleLogin = (e) => {
         e.preventDefault()
+        console.log("handleLogin")
+        console.log("this.state.username", this.state.userName)
         APIManager.getUserByUserName(this.state.userName)
         .then ((user) => {
             console.log(user[0].id)
@@ -27,12 +29,13 @@ export default class Login extends Component {
 
                 })
             )
-        })
+        }
+    )
     }
     render() {
         return (
             <div className="login">
-            <form onSubmit={this.handlelogin}>
+            <form onSubmit={this.handleLogin}>
             <h1 className="h3 mb-3 font-weight-normal">Please Login</h1>
             <label htmlFor="inputUserName">
             UserName:
@@ -52,7 +55,6 @@ export default class Login extends Component {
             }>
             Sign In
             </button>
-            <br></br>            
             </form>
             </div>
         
