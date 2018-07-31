@@ -19,22 +19,22 @@ const Database = Object.create({}, {
             })
             .then(a => a.json())
         }
-    // },
+    },
 
-    // getUserByUserName: {
-    //     value: (userName) => {
-    //         return fetch(`http://localhost:5002/users?userName=${userName}`)
-    //         .then(e => e.json())
-    //     }
-    // },
+    getUserByUserName: {
+        value: (userName) => {
+            return fetch(`http://localhost:5002/users?userName=${userName}`)
+            .then(e => e.json())
+        }
+    },
 
-    // getIdOfCurrentUser: {
-    //     value: () => {
-    //         const databaseString = localStorage.getItem("credentials")
-    //         const currentUserObject = JSON.parse(databaseString)
-    //         console.log("user", currentUserObject)
-    //         return currentUserObject.currentUserId
-        // }
+    getIdOfCurrentUser: {
+        value: () => {
+            const databaseString = localStorage.getItem("credentials")
+            const currentUserObject = JSON.parse(databaseString)
+            console.log("user", currentUserObject)
+            return currentUserObject.currentUserId
+        }
     }
 
 })

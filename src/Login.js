@@ -23,7 +23,7 @@ export default class Login extends Component {
                 JSON.stringify({
                     userName: this.state.userName,
                     email: this.state.email,
-                    currentUserId: user[0].id]
+                    currentUserId: user[0].id
 
                 })
             )

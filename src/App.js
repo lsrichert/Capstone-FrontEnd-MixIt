@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
-
+import Login from "./Login"
 import DrinkList from "./Drinks/DrinkList"
 // import CabinetList from "./Cabinet/CabinetList"
 import "./index.css"
@@ -11,6 +11,7 @@ class App extends Component {
     return (
 
       <React.Fragment>
+       <Login />
         <DrinkList />
         </React.Fragment>
 
