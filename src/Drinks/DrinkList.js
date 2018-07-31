@@ -5,7 +5,8 @@ import { FormControl, FormGroup } from "react-bootstrap";
 
 export default class DrinkList extends Component {
     state = {
-        drinks: []
+        drinks: [],
+        drinkToEdit: {}
     }
 // Here, my DOM is being set up with the data from 'state'. 
 // I'm essentially setting state.
@@ -36,7 +37,7 @@ addDrink = (drink) => {
         DrinkLiquor: this.state.DrinkLiquor,
         DrinkMixer: this.state.DrinkMixer,
         DrinkInstructions: this.state.DrinkInstructions,
-        userId: Database.getIdOfCurrentUser()
+        // userId: Database.getIdOfCurrentUser()
     }
     Database.addDrink(newObject)
     .then(DrinkList => {
@@ -45,19 +46,44 @@ addDrink = (drink) => {
     console.log("newObject", newObject)
 
 }
+handleEdit = (drink) => {
+    drink.preventDefault()
+    fetch(`http://localhost:5002/drinks/${this.state.drinkToEdit.id}`, {
+        method: "PUT",
+        body: JSON.stringify(this.state.drinkToEdit),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }).then(() => { return fetch("http://localhost:5002/drinks") })
+        .then(a => a.json())
+        .then(DrinkList => {
+            this.setState({
+                drinks: DrinkList
+            })
+
+        })
+}
+EditDrink = (drinkId) => {
+    console.log("drinkId", drinkId)
+    fetch(`http://localhost:5002/drinks/${drinkId}`)
+    .then(a => a.json())
+    .then(DrinkList => {
+        drinkToEdit: DrinkList
+    })
+}
 // I need to build the form for the user to add a new drink
     render() {
         return (
             <div className="drink">
                 <form onSubmit={this.addDrink.bind(this)}>
-                    <h1 id="drink-name" className="h3 mb-3 font-weight-normal">Drink List</h1>
+                    <h1 id="drink-name" className="h3 mb-3 font-weight-normal">My Drinks</h1>
                     <label htmlFor="DrinkName">
                         Drink Name:
             </label>
                     <FormGroup>
                         <FormControl onChange={this.drinkFormInput} type="text"
                             id="DrinkName"
-                            placeholder="Drink Name"
+                            placeholder="Enter Drink Name"
                             required="" autoFocus="" />
                     </FormGroup>
                     <label htmlFor="DrinkLiquor">
@@ -66,41 +92,78 @@ addDrink = (drink) => {
                     <FormGroup>
                         <FormControl onChange={this.drinkFormInput} type="text"
                             id="DrinkLiquor"
-                            placeholder="Drink Liquors"
+                            placeholder="Enter Drink Liquors"
                             required="" />
                     </FormGroup>
                     <label htmlFor="DrinkMixer">
-                    Drink Mixers:
+                        Drink Mixers:
                     </label>
                     <FormGroup>
                         <FormControl onChange={this.drinkFormInput} type="text"
-                        id="DrinkMixer"
-                        placeholder="Drink Mixers"
-                        required="" />
-                        </FormGroup>
+                            id="DrinkMixer"
+                            placeholder="Enter Drink Mixers"
+                            required="" />
+                    </FormGroup>
                     <label htmlFor="DrinkInstructions">
-                    Drink Instructions:
+                        Drink Instructions:
                     </label>
                     <FormGroup>
                         <FormControl onChange={this.drinkFormInput} type="text"
-                        id="DrinkInstructions"
-                        placeholder="Drink Instructions"
-                        required="" />
-                        </FormGroup>
-                        <button type="submit">
+                            id="DrinkInstructions"
+                            placeholder="Enter Drink Instructions"
+                            required="" />
+                    </FormGroup>
+                    <button type="submit">
                         Add Drink
                         </button>
-                        </form>
-                        {
-                            this.state.drinks.map(drink =>
-                            <Drink key={drink.id} drink={drink}  />
-                        )
-                        }
-                        </div>
-
+                </form>
+                {
+                    this.state.drinks.map(drink =>
+                        <Drink key={drink.id} drink={drink}
+                            EditDrink={this.EditDrink} drink={drink} />
                     )
                 }
-                }
+
+                <form onSubmit={this.handleEdit.bind(this)}>
+
+                    <input onChange={this.handleFieldChange} type="text"
+                        id="DrinkName"
+                        placeholder="Edit Drink Name"
+                        value={this.state.drinkToEdit.DrinkName}
+                        required="" autoFocus="" />
+
+                    <input onChange={this.handleFieldChange} type="text"
+                        id="DrinkLiquor"
+                        placeholder="Edit Drink Liquors"
+                        value={this.state.drinkToEdit.DrinkLiquor}
+                        required="" autoFocus="" />
+
+                    <input onChange={this.handleFieldChange} type="text"
+                        id="DrinkMixer"
+                        placeholder="Edit Drink Mixers"
+                        value={this.state.drinkToEdit.DrinkMixer}
+                        required="" autoFocus="" />
+
+                    <input onChange={this.handleFieldChange} type="text"
+                        id="DrinkIngredients"
+                        placeholder="Edit Drink Instructions"
+                        value={this.state.drinkToEdit.DrinkInstructions}
+                        required="" autoFocus="" />
+
+                    <button type="submit">
+                        Update Drink
+                       </button>
+                </form>
+
+
+
+
+
+            </div>
+
+        )
+    }
+}
                 
                 
                 

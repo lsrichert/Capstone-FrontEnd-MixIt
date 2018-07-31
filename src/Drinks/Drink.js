@@ -12,7 +12,7 @@ export default props => {
                 <CardText>{props.drink.DrinkLiquor}</CardText>
                 <CardText>{props.drink.DrinkMixer}</CardText>
                 <CardText>{props.drink.DrinkInstructions}</CardText>
-                <a href="#" onClick={() => props.EditDrink(props.drink.id)}>Edit</a>
+                <a href="#" onClick={() => props.EditDrink(props.drink.id)}>Edit Drink</a>
 
             </Card>
 

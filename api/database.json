@@ -53,25 +53,27 @@
       "id": 5
     },
     {
+      "DrinkName": "gin and tonic",
+      "DrinkLiquor": "gin",
+      "DrinkMixer": "tonic",
+      "DrinkInstructions": "mix",
+      "userId": 2,
+      "id": 6
+    },
+    {
+      "DrinkName": "a drink",
+      "DrinkLiquor": "rum",
+      "DrinkMixer": "any mixer",
+      "DrinkInstructions": "mix",
+      "userId": 2,
+      "id": 7
+    },
+    {
       "DrinkName": "a drink",
       "DrinkLiquor": "any liquor",
-      "DrinkMixer": "mix",
-      "DrinkInstructions": "shake",
-      "id": 9
-    },
-    {
-      "DrinkName": "rum runner",
-      "DrinkLiquor": "rum",
-      "DrinkMixer": "juice",
+      "DrinkMixer": "any mixer",
       "DrinkInstructions": "mix",
-      "id": 10
-    },
-    {
-      "DrinkName": "best drink",
-      "DrinkLiquor": "any liquor",
-      "DrinkMixer": "mix",
-      "DrinkInstructions": "shake",
-      "id": 11
+      "id": 8
     }
   ]
 }
