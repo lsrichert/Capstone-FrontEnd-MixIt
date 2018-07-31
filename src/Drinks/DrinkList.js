@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-// import Drink from "Drink"
+import Drink from "./Drink"
 import Database from "../APIManager"
 import { FormControl, FormGroup } from "react-bootstrap";
 
@@ -35,7 +35,8 @@ addDrink = (drink) => {
         DrinkName: this.state.DrinkName,
         DrinkLiquor: this.state.DrinkLiquor,
         DrinkMixer: this.state.DrinkMixer,
-        DrinkInstructions: this.state.DrinkInstructions
+        DrinkInstructions: this.state.DrinkInstructions,
+        // userId: Database.getIdOfCurrentUser()
     }
     Database.addDrink(newObject)
     .then(DrinkList => {
@@ -90,6 +91,11 @@ addDrink = (drink) => {
                         Add Drink
                         </button>
                         </form>
+                        {
+                            this.state.drinks.map(drink =>
+                            <Drink key={drink.id} drink={drink}  />
+                        )
+                        }
                         </div>
 
                     )

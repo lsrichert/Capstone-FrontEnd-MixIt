@@ -8,51 +8,65 @@
   ],
   "drinks": [
     {
-      "name": "Jack and Coke",
-      "liquor": "2 oz Jack Daniels Whiskey",
-      "mixer": "4 oz coke",
-      "instructions": "Pour over ice and stir",
+      "DrinkName": "Jack and Coke",
+      "DrinkLiquor": "2 oz Jack Daniels Whiskey",
+      "DrinkMixer": "4 oz coke",
+      "DrinkInstructions": "Pour over ice and stir",
       "userId": 1,
       "id": 1
     },
     {
-      "name": "Bourbon Amaretto Sour",
-      "liquor": "2 oz amaretto liqueur, 3/4 oz bourbon",
-      "mixer": "1 oz sour mix, 1 oz simple syrup",
-      "instructions": "Mix in shaker and strain into glass on the rocks",
+      "DrinkName": "Bourbon Amaretto Sour",
+      "DrinkLiquor": "2 oz amaretto liqueur, 3/4 oz bourbon",
+      "DrinkMixer": "1 oz sour mix, 1 oz simple syrup",
+      "DrinkInstructions": "Mix in shaker and strain into glass with ice",
       "userId": 1,
       "id": 2
     },
     {
-      "name": "Cathy's Cosmo",
-      "liquor": "1 1/2 oz Citron Vodka, 1/2 oz Cointreau",
-      "mixer": "1 oz cranberry juice, 1/2 oz lime juice",
-      "instructions": "Mix in shaker and strain into martini glass",
+      "DrinkName": "Cathy's Cosmo",
+      "DrinkLiquor": "1 1/2 oz Citron Vodka, 1/2 oz Cointreau",
+      "DrinkMixer": "1 oz cranberry juice, 1/2 oz lime juice",
+      "DrinkInstructions": "Mix in shaker and strain into martini glass",
       "userId": 1,
       "id": 3
     },
     {
-      "name": "Milan Mai Tai",
-      "liquor": "2 oz Malibu Rum, 1/2 oz amaretto liqueur",
-      "mixer": "1 oz sour mix, 2 oz pineapple juice, splash of grenadine",
-      "instructions": "Mix in shaker and strain into glass",
+      "DrinkName": "Milan Mai Tai",
+      "DrinkLiquor": "2 oz Malibu Rum, 1/2 oz amaretto liqueur",
+      "DrinkMixer": "1 oz sour mix, 2 oz pineapple juice, splash of grenadine",
+      "DrinkInstructions": "Mix in shaker and strain into glass",
       "userId": 1,
       "id": 4
     },
     {
-      "name": "Sailor Jerry and 7-up",
-      "liquor": "2 oz Sailor Jerry Spiced Rum",
-      "mixer": "4 oz 7-up",
-      "instructions": "Pour over ice and stir",
+      "DrinkName": "Sailor Jerry and 7-up",
+      "DrinkLiquor": "2 oz Sailor Jerry Spiced Rum",
+      "DrinkMixer": "4 oz 7-up",
+      "DrinkInstructions": "Pour over ice and stir",
       "userId": 1,
       "id": 5
     },
     {
-      "DrinkName": "any drink",
+      "DrinkName": "a drink",
       "DrinkLiquor": "any liquor",
-      "DrinkMixer": "any mixer",
+      "DrinkMixer": "mix",
+      "DrinkInstructions": "shake",
+      "id": 9
+    },
+    {
+      "DrinkName": "rum runner",
+      "DrinkLiquor": "rum",
+      "DrinkMixer": "juice",
       "DrinkInstructions": "mix",
-      "id": 6
+      "id": 10
+    },
+    {
+      "DrinkName": "best drink",
+      "DrinkLiquor": "any liquor",
+      "DrinkMixer": "mix",
+      "DrinkInstructions": "shake",
+      "id": 11
     }
   ]
 }
