@@ -20,6 +20,18 @@ const Database = Object.create({}, {
             .then(e => e.json())
         }
     },
+    // // getUpdatedDrink: {
+    // //     value: (drinkId) => {
+    // //         return fetch(`http://localhost:5002/drinks/${drinkId}`, {
+    // //            method: "POST",
+    // //            body: JSON.stringify({
+                   
+    // //            }),
+    //            headers: { "Content-Type": "application/json" }
+    //         })
+    //         .then(e => e.json())
+    //     }
+    // },
 
     addDrink: {
         value: (newObject) => {

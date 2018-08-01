@@ -52,33 +52,7 @@ deleteDrink = (drinkId) => {
         .then(deletedDrink => this.setState({ drinks: deletedDrink }))
 }
 
-handleEdit = (drink) => {
-    drink.preventDefault()
-    fetch(`http://localhost:5002/drinks/${this.state.drinkToEdit.id}`, {
-        method: "PUT",
-        body: JSON.stringify(this.state.drinkToEdit),
-        headers: {
-            "Content-Type": "application/json"
-        }
-    }).then(() => { return fetch("http://localhost:5002/drinks") })
-        .then(a => a.json())
-        .then(DrinkList => {
-            this.setState({
-                drinks: DrinkList
-            })
 
-        })
-}
-
-EditDrink = (drinkId) => {
-    console.log("drinkId", drinkId)
-    fetch(`http://localhost:5002/drinks/${drinkId}`)
-    .then(a => a.json())
-    .then(DrinkList => {
-        drinkToEdit: DrinkList
-    })
-    
-}
 
 // I need to build the form for the user to add a new drink
     render() {
@@ -135,7 +109,7 @@ EditDrink = (drinkId) => {
                     )
                 }
 
-                <form onSubmit={this.handleEdit.bind(this)}>
+                <form onSubmit={this.handleEdit}>
 
                     <input onChange={this.handleFieldChange} type="text"
                         id="DrinkName"
