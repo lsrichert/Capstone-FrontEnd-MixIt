@@ -13,52 +13,13 @@
   ],
   "drinks": [
     {
-      "DrinkName": "jack ",
-      "DrinkLiquor": "2 oz Jack Daniels Whiskey",
-      "DrinkMixer": "4 oz coke",
-      "DrinkInstructions": "Pour over ice and stir",
-      "userId": 1,
-      "id": 1
-    },
-    {
-      "DrinkName": "Bourbon Amaretto Sour",
-      "DrinkLiquor": "2 oz amaretto liqueur, 3/4 oz bourbon",
-      "DrinkMixer": "1 oz sour mix, 1 oz simple syrup",
-      "DrinkInstructions": "Mix in shaker and strain into glass with ice",
-      "userId": 1,
-      "id": 2
-    },
-    {
-      "DrinkName": "Cosmo",
-      "DrinkLiquor": "1 1/2 oz Citron Vodka, 1/2 oz Cointreau",
-      "DrinkMixer": "1 oz cranberry juice, 1/2 oz lime juice",
-      "DrinkInstructions": "Mix in shaker and strain into martini glass",
-      "userId": 1,
-      "id": 3
-    },
-    {
-      "DrinkName": "Milan Mai Tai",
-      "DrinkLiquor": "2 oz Malibu Rum, 1/2 oz amaretto liqueur",
-      "DrinkMixer": "1 oz sour mix, 2 oz pineapple juice, splash of grenadine",
-      "DrinkInstructions": "Mix in shaker and strain into glass",
-      "userId": 1,
-      "id": 4
-    },
-    {
-      "DrinkName": "Sailor Jerry and 7-up",
-      "DrinkLiquor": "2 oz Sailor Jerry Spiced Rum",
-      "DrinkMixer": "4 oz 7-up",
-      "DrinkInstructions": "Pour over ice and stir",
-      "userId": 1,
-      "id": 5
-    },
-    {
-      "DrinkName": "any drink",
+      "DrinkName": "any drinkkkkk",
       "DrinkLiquor": "any liquor",
-      "DrinkMixer": "any mixer",
+      "DrinkMixer": "mixxxx",
       "DrinkInstructions": "mix",
       "userId": 2,
-      "id": 6
+      "id": 6,
+      "DrinkIngredients": "mix it"
     },
     {
       "DrinkName": "the best drink",

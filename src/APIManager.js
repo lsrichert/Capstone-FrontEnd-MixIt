@@ -20,18 +20,30 @@ const Database = Object.create({}, {
             .then(e => e.json())
         }
     },
-    // // getUpdatedDrink: {
-    // //     value: (drinkId) => {
-    // //         return fetch(`http://localhost:5002/drinks/${drinkId}`, {
-    // //            method: "POST",
-    // //            body: JSON.stringify({
-                   
-    // //            }),
-    //            headers: { "Content-Type": "application/json" }
-    //         })
-    //         .then(e => e.json())
+    updateOneDrink: {
+        value: (drinkId, drinkToEdit) => {
+            return fetch(`http://localhost:5002/drinks/${drinkId}`, {
+               method: "PUT",
+               body: JSON.stringify(drinkToEdit),
+               headers: { "Content-Type": "application/json" }
+            })
+            .then(e => e.json())
+        }
+    },
+    // handleEdit: {
+    //     value: (drinkToEdit) => {
+    //         return fetch(`http://localhost:5002/drinks/${drinkToEdit.id}`, {
+    //             method: "PUT",
+    //             body: JSON.stringify(drinkToEdit),
+    //             headers: {
+    //                 "Content-Type": "application/json"
+    //             }
+    //         }).then(() => { return fetch("http://localhost:5002/drinks") })
+    //             .then(a => a.json())
     //     }
     // },
+    
+    
 
     addDrink: {
         value: (newObject) => {

@@ -6,23 +6,24 @@ export default class Drink extends Component {
   state = {
       showForm: false
   };
+  
 
   handleEdit = drink => {
-    drink.preventDefault();
-    fetch(`http://localhost:5002/drinks/${this.state.drinkToEdit.id}`, {
-      method: "PUT",
-      body: JSON.stringify(this.state.drinkToEdit),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
-      .then(() => {
-        return fetch("http://localhost:5002/drinks");
-      })
-      .then(a => a.json())
+    // drink.preventDefault();
+    // fetch(`http://localhost:5002/drinks/${this.state.drinkToEdit.id}`, {
+    //   method: "PUT",
+    //   body: JSON.stringify(this.state.drinkToEdit),
+    //   headers: {
+    //     "Content-Type": "application/json"
+    //   }
+    // })
+    //   .then(() => {
+    //     return fetch("http://localhost:5002/drinks");
+    //   })
+    //   .then(a => a.json())
+    this.props.handleEditADrink(this.state.drinkToEdit.id, this.state.drinkToEdit)
       .then(DrinkList => {
         this.setState({
-          drinks: DrinkList,
           showForm: false
         });
       });

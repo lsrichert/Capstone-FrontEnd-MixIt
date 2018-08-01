@@ -16,6 +16,19 @@ componentDidMount() {
         this.setState({ drinks: drinks })
     })
 }
+
+handleEditADrink = (drinkId, drinkToEdit) => {
+    return Database.updateOneDrink(drinkId, drinkToEdit)
+    .then(() => {
+        return Database.getAllDrinks()
+    })
+    .then(drinks => {
+        this.setState({ drinks: drinks })
+    })
+}
+
+
+
 // This function enables me to input new drink details and 
 // then prepare to change state with the new drink.
 drinkFormInput = (drink) => {
@@ -105,41 +118,12 @@ deleteDrink = (drinkId) => {
                         <Drink key={drink.id} drink={drink}
                             EditDrink={this.EditDrink} drink={drink} 
                             deleteDrink={this.deleteDrink} drink={drink}
+                            handleEditADrink={this.handleEditADrink}
 />
                     )
                 }
 
-                <form onSubmit={this.handleEdit}>
-
-                    <input onChange={this.handleFieldChange} type="text"
-                        id="DrinkName"
-                        placeholder="Edit Drink Name"
-                        value={this.state.drinkToEdit.DrinkName}
-                        required="" autoFocus="" />
-
-                    <input onChange={this.handleFieldChange} type="text"
-                        id="DrinkLiquor"
-                        placeholder="Edit Drink Liquors"
-                        value={this.state.drinkToEdit.DrinkLiquor}
-                        required="" autoFocus="" />
-
-                    <input onChange={this.handleFieldChange} type="text"
-                        id="DrinkMixer"
-                        placeholder="Edit Drink Mixers"
-                        value={this.state.drinkToEdit.DrinkMixer}
-                        required="" autoFocus="" />
-
-                    <input onChange={this.handleFieldChange} type="text"
-                        id="DrinkIngredients"
-                        placeholder="Edit Drink Instructions"
-                        value={this.state.drinkToEdit.DrinkInstructions}
-                        required="" autoFocus="" />
-
-                    <button type="submit">
-                        Update Drink
-                       </button>
-                </form>
-
+                
 
 
 
