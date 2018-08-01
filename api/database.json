@@ -16,16 +16,15 @@
       "DrinkName": "any drinkkkkk",
       "DrinkLiquor": "any liquor",
       "DrinkMixer": "mixxxx",
-      "DrinkInstructions": "mix",
+      "DrinkInstructions": "mix a lot",
       "userId": 2,
-      "id": 6,
-      "DrinkIngredients": "mix it"
+      "id": 6
     },
     {
       "DrinkName": "the best drink",
       "DrinkLiquor": "best liquor",
       "DrinkMixer": "best mixer",
-      "DrinkInstructions": "mix",
+      "DrinkInstructions": "shake it a lot",
       "userId": 2,
       "id": 7
     }

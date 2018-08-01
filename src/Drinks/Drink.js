@@ -89,7 +89,7 @@ export default class Drink extends Component {
           <input
             onChange={this.handleFieldChange}
             type="text"
-            id="DrinkIngredients"
+            id="DrinkInstructions"
             placeholder="Edit Drink Instructions"
             value={this.state.drinkToEdit.DrinkInstructions}
             required=""
