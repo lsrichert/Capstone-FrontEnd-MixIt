@@ -33,7 +33,7 @@ export default class DrinkList extends Component {
     const stateToChange = {};
     stateToChange[drink.target.id] = drink.target.value;
     this.setState(stateToChange);
-    showAddDrinkForm: false
+    // showAddDrinkForm: false
   };
   // This code gets the username data so React will have a way
   // to know which user each drink belongs to.
@@ -51,7 +51,7 @@ export default class DrinkList extends Component {
       DrinkMixer: this.state.DrinkMixer,
       DrinkInstructions: this.state.DrinkInstructions,
       userId: Database.getIdOfCurrentUser(),
-      showAddDrinkForm:true
+    //   showAddDrinkForm:true
     };
     console.log(drink.target)
     const allInputs=document.querySelectorAll("#drinkForm input")
@@ -60,6 +60,7 @@ export default class DrinkList extends Component {
         input.value=""
     })
     
+    
 
 
     Database.addDrink(newObject).then(DrinkList => {
@@ -67,7 +68,10 @@ export default class DrinkList extends Component {
     });
     console.log("newObject", newObject);    
   };
-  
+  showAddForm = () =>
+    this.setState({
+        showAddDrinkForm: true
+      });
   deleteDrink = drinkId => {
     Database.deleteDrink(drinkId)
       // console.log("drinkId", drinkId)
@@ -82,12 +86,15 @@ export default class DrinkList extends Component {
       
       className="drink">
     
-         <button type="submit">Add New Drink</button>
+         <button type="submit" onClick={this.showAddForm}  >Add New Drink</button>
          
         {/* //  {/* I need to conditionally render this form based on whether 
         // or not the 'Add New Drink' button has been clicked. If it has been
         // clicked, render the form. If it has not been clicked, render only
         // the list of drinks */} 
+         
+        {this.state.showAddDrinkForm &&  
+
          
 
         <form id="drinkForm" onSubmit={this.addDrink.bind(this)}>
@@ -144,6 +151,7 @@ export default class DrinkList extends Component {
           </FormGroup>
           <button type="submit">Save Drink</button>
         </form>
+         }
         {this.state.drinks.map(drink => (
           <Drink
             key={drink.id}
