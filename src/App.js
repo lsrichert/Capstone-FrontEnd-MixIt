@@ -1,19 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 // import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 // import Login from "./Login"
-import DrinkList from "./Drinks/DrinkList"
+import DrinkList from "./Drinks/DrinkList";
 // import CabinetList from "./Cabinet/CabinetList"
-import "./index.css"
+import "./index.css";
+import Header from "./Header";
 
 class App extends Component {
   render() {
     return (
-
       <React.Fragment>
-       {/* <Login /> */}
+        {/* <Login /> */}
+        <Header />
         <DrinkList />
-        </React.Fragment>
+      </React.Fragment>
 
       // {/* // <div className="App">
       // //   <header className="App-header">

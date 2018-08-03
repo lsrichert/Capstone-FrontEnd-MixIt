@@ -6,7 +6,8 @@ import { FormControl, FormGroup } from "react-bootstrap";
 export default class DrinkList extends Component {
   state = {
     drinks: [],
-    drinkToEdit: {}
+    drinkToEdit: {},
+    showAddDrinkForm: false
   };
   // Here, my DOM is being set up with the data from 'state'.
   // I'm essentially setting state.
@@ -32,6 +33,7 @@ export default class DrinkList extends Component {
     const stateToChange = {};
     stateToChange[drink.target.id] = drink.target.value;
     this.setState(stateToChange);
+    showAddDrinkForm: false
   };
   // This code gets the username data so React will have a way
   // to know which user each drink belongs to.
@@ -48,12 +50,9 @@ export default class DrinkList extends Component {
       DrinkLiquor: this.state.DrinkLiquor,
       DrinkMixer: this.state.DrinkMixer,
       DrinkInstructions: this.state.DrinkInstructions,
-      userId: Database.getIdOfCurrentUser()
+      userId: Database.getIdOfCurrentUser(),
+      showAddDrinkForm:true
     };
-    // this.refs.DrinkName.value = ""
-    // this.refs.DrinkLiquor.value = ""
-    // this.refs.DrinkMixer.value = ""
-    // this.refs.DrinkInstructions.value = ""
     console.log(drink.target)
     const allInputs=document.querySelectorAll("#drinkForm input")
     console.log(allInputs)
@@ -77,8 +76,20 @@ export default class DrinkList extends Component {
 
   // I need to build the form for the user to add a new drink
   render() {
-    return (
-      <div className="drink">
+     return (
+
+      <div 
+      
+      className="drink">
+    
+         <button type="submit">Add New Drink</button>
+         
+        {/* //  {/* I need to conditionally render this form based on whether 
+        // or not the 'Add New Drink' button has been clicked. If it has been
+        // clicked, render the form. If it has not been clicked, render only
+        // the list of drinks */} 
+         
+
         <form id="drinkForm" onSubmit={this.addDrink.bind(this)}>
           <h1 id="drink-name" className="h3 mb-3 font-weight-normal">
             My Drinks
@@ -131,7 +142,7 @@ export default class DrinkList extends Component {
               autoFocus=""
             />
           </FormGroup>
-          <button type="submit">Add Drink</button>
+          <button type="submit">Save Drink</button>
         </form>
         {this.state.drinks.map(drink => (
           <Drink

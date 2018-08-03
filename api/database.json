@@ -37,45 +37,13 @@
       "id": 8
     },
     {
-      "DrinkName": "ssss",
-      "DrinkLiquor": "ssss",
-      "DrinkMixer": "sss",
-      "DrinkInstructions": "sss",
-      "userId": 2,
+      "DrinkName": "jack and coke",
+      "DrinkLiquor": "2 oz Jack Daniels Whiskey",
+      "DrinkMixer": "4 oz coke",
+      "DrinkInstructions": "shake",
+      "userId": 1,
+      "showAddDrinkForm": true,
       "id": 9
-    },
-    {
-      "DrinkName": "kk",
-      "userId": 2,
-      "id": 10
-    },
-    {
-      "DrinkName": "kk",
-      "userId": 2,
-      "id": 11
-    },
-    {
-      "DrinkName": "kk",
-      "userId": 2,
-      "id": 12
-    },
-    {
-      "DrinkName": "jjj",
-      "userId": 2,
-      "id": 13
-    },
-    {
-      "DrinkName": "hhh",
-      "userId": 2,
-      "id": 14
-    },
-    {
-      "DrinkName": "jack",
-      "DrinkLiquor": "jack",
-      "DrinkMixer": "jack",
-      "DrinkInstructions": "mix",
-      "userId": 2,
-      "id": 18
     }
   ]
 }
