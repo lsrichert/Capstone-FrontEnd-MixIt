@@ -30,19 +30,6 @@ const Database = Object.create({}, {
             .then(e => e.json())
         }
     },
-    // handleEdit: {
-    //     value: (drinkToEdit) => {
-    //         return fetch(`http://localhost:5002/drinks/${drinkToEdit.id}`, {
-    //             method: "PUT",
-    //             body: JSON.stringify(drinkToEdit),
-    //             headers: {
-    //                 "Content-Type": "application/json"
-    //             }
-    //         }).then(() => { return fetch("http://localhost:5002/drinks") })
-    //             .then(a => a.json())
-    //     }
-    // },
-    
     
 
     addDrink: {
@@ -60,6 +47,7 @@ const Database = Object.create({}, {
             // Here, I am setting the new state with my new drink
             .then(a => a.json())
         }
+        
     },
 
     deleteDrink: {

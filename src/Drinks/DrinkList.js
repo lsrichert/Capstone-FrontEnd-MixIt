@@ -62,16 +62,24 @@ export default class DrinkList extends Component {
     
     
 
-
+// Adds the new drink to the database and resets state (state includes the new list of drinks AND the 
+// the showAddDrinkForm state of false, so that the add form will no longer show up after the save button is clicked.
     Database.addDrink(newObject).then(DrinkList => {
-      this.setState({ drinks: DrinkList });
+      this.setState({ drinks: DrinkList, showAddDrinkForm: false });
     });
     console.log("newObject", newObject);    
   };
+//   Function for making the new drink form display
   showAddForm = () =>
     this.setState({
         showAddDrinkForm: true
       });
+
+    //   hideAddForm = () =>
+    //   this.setState({
+    //     showAddDrinkForm: false
+    //   });
+
   deleteDrink = drinkId => {
     Database.deleteDrink(drinkId)
       // console.log("drinkId", drinkId)
@@ -85,16 +93,12 @@ export default class DrinkList extends Component {
       <div 
       
       className="drink">
-    
-         <button type="submit" onClick={this.showAddForm}  >Add New Drink</button>
-         
-        {/* //  {/* I need to conditionally render this form based on whether 
-        // or not the 'Add New Drink' button has been clicked. If it has been
-        // clicked, render the form. If it has not been clicked, render only
-        // the list of drinks */} 
-         
-        {this.state.showAddDrinkForm &&  
 
+
+        {/* This is the button for adding a new drink; clicking this button changes state and
+        displays the 'Add drink form' */}
+         <button type="submit" onClick={this.showAddForm}  >Add A New Drink</button> 
+         {this.state.showAddDrinkForm &&  
          
 
         <form id="drinkForm" onSubmit={this.addDrink.bind(this)}>
@@ -149,9 +153,13 @@ export default class DrinkList extends Component {
               autoFocus=""
             />
           </FormGroup>
-          <button type="submit">Save Drink</button>
+          <button type="submit"
+        //   onClick={this.hideAddForm} 
+          >Save Drink</button>
+          {/* {this.state.showAddDrinkForm} */}
         </form>
          }
+         
         {this.state.drinks.map(drink => (
           <Drink
             key={drink.id}
