@@ -50,6 +50,20 @@ const Database = Object.create({}, {
         
     },
 
+    addUser: {
+        value: (newUser) => {
+            return fetch("http://localhost:5002/users", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(newUser)
+            })
+            .then(() => {
+                return fetch("http://localhost:5002/users")
+            })
+            .then(a => a.json())
+        }
+    },
+
     deleteDrink: {
         value: (drinkId) => {
             // This code actually deletes the drink you want to delete

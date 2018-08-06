@@ -69,12 +69,13 @@ export default class DrinkList extends Component {
     });
     console.log("newObject", newObject);    
   };
-//   Function for making the new drink form display
+//   Function for making the add new drink form display
   showAddForm = () =>
     this.setState({
         showAddDrinkForm: true
       });
-
+// I wrote this function to hide the add drink form which worked, but it didn't allow the new drink to save
+// in the database because it had to be called with the submit button, which lives within the form.
     //   hideAddForm = () =>
     //   this.setState({
     //     showAddDrinkForm: false
