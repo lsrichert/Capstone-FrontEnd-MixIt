@@ -11,12 +11,21 @@ export default class DrinkList extends Component {
   };
   // Here, my DOM is being set up with the data from 'state'.
   // I'm essentially setting state.
-  componentDidMount() {
-    Database.getAllDrinks().then(drinks => {
-      this.setState({ drinks: drinks });
-    });
-  }
+//   componentDidMount() {
+//     Database.getAllDrinks().then(drinks => {
+//       this.setState({ drinks: drinks });
+//     });
+//   }
 
+// I re-wrote the above code because that was causing ALL the drinks to load
+// no matter which user was logged in. I only want a user to see their own drinks.
+componentDidMount() {
+    let userId = Database.getIdOfCurrentUser()
+    Database.getUserDrink("drinks", userId)
+    .then(drinks => {
+        this.setState({ drinks: drinks})
+    })
+}
   handleEditADrink = (drinkId, drinkToEdit) => {
     return Database.updateOneDrink(drinkId, drinkToEdit)
       .then(() => {

@@ -1,5 +1,7 @@
 import React, { Component } from "react"
 import APIManager from "./APIManager"
+import Database from "./APIManager";
+
 
 export default class Login extends Component {
     state = {
@@ -38,18 +40,36 @@ export default class Login extends Component {
         const newUser = {
           userName: this.state.userName,
           email: this.state.email,
-        //   userId: APIManager.getIdOfCurrentUser(),
+          userId: APIManager.getIdOfCurrentUser(),
         };
-        console.log(user.target)  
+        // console.log(user.target)  
     
     // Adds the new drink to the database and resets state (state includes the new list of drinks AND the 
     // the showAddDrinkForm state of false, so that the add form will no longer show up after the save button is clicked.
 
-        APIManager.addUser(newUser).then(Login => {
-          this.setState({ users: Login });
+        Database.addUser(newUser).then(user => {
+          this.setState({ users: user });
         });
         console.log("newUser", newUser);    
       };
+      handleRegister = (e) => {
+        e.preventDefault()
+        let newUser = {
+            userName: this.state.userName,
+            email: this.state.email
+        }
+        Database.postUser("user", newUser)
+        .then(() => {
+            this.stateToChange
+        })
+    
+    }
+    handleRegisterFieldChange = (evt) => {
+        const stateToChange = {}
+        stateToChange[evt.target.id] = evt.target.value
+        this.setState(stateToChange)
+    }
+      
     render() {
         return (
             <div className="login">
@@ -73,21 +93,24 @@ export default class Login extends Component {
             }>
             Log In
             </button> 
+            </form>
+
             <br></br>
 
+            <form onSubmit={this.handleRegister}>
             <h2 className="h2 mb-3 font-weight-normal">Register</h2>
             <h5 className="h5 mb-3 font-weight-normal">If you are a new user, please register here</h5>
             <label htmlFor="inputUserName">
             UserName:
             </label>
-            <input onChange={this.handleFieldChange} type="text"
+            <input onChange={this.handleRegisterFieldChange} type="text"
             id="userName"
             placeholder="Register Username"
             required="" autoFocus="" />
             <label htmlFor="inputEmail">
             Email:
             </label>
-            <input onChange={this.handleFieldChange} type="email"
+            <input onChange={this.handleRegisterFieldChange} type="email"
             id="email"
             placeholder="Register Email"
             required="" autoFocus="" />

@@ -63,6 +63,13 @@ const Database = Object.create({}, {
             .then(a => a.json())
         }
     },
+    getUserDrink: {
+        value: (drinkList, id) => {
+            return fetch(`http://localhost:5002/${drinkList}?userId=${id}`).then(e =>
+        e.json()
+        )
+        }
+    },
 
     deleteDrink: {
         value: (drinkId) => {
