@@ -16,14 +16,19 @@
       "id": 3
     },
     {
-      "userName": " ",
-      "email": " ",
+      "userName": "sally",
+      "email": "sally@sally.com",
       "id": 4
     },
     {
-      "userName": " ",
-      "email": " ",
+      "userName": "sally",
+      "email": "sally@sally.com",
       "id": 5
+    },
+    {
+      "userName": "jane",
+      "email": "jane@jane.com",
+      "id": 6
     }
   ],
   "drinks": [
@@ -79,6 +84,23 @@
       "DrinkName": "test drink again",
       "userId": 1,
       "id": 15
+    },
+    {
+      "DrinkName": "sally's drink",
+      "userId": 3,
+      "id": 16,
+      "DrinkLiquor": "any liquors",
+      "DrinkMixer": "any mix"
+    },
+    {
+      "DrinkName": "sally sally",
+      "userId": 3,
+      "id": 17
+    },
+    {
+      "DrinkName": "sally sally",
+      "userId": 3,
+      "id": 18
     }
   ]
 }

@@ -37,12 +37,12 @@ export default class Login extends Component {
 
     addUser = user => {
         user.preventDefault();
-        const newUser = {
+        let newUser = {
           userName: this.state.userName,
           email: this.state.email,
-          userId: APIManager.getIdOfCurrentUser(),
+          userId: Database.getIdOfCurrentUser(),
         };
-        // console.log(user.target)  
+        console.log(user.target)  
     
     // Adds the new drink to the database and resets state (state includes the new list of drinks AND the 
     // the showAddDrinkForm state of false, so that the add form will no longer show up after the save button is clicked.
@@ -58,18 +58,26 @@ export default class Login extends Component {
             userName: this.state.userName,
             email: this.state.email
         }
-        // Database.addUser(regUser).then(user => {
-        //     this.setState({ users: user });
-        //   });
+        Database.addUser(regUser).then(user => {
+            this.setState({ users: user });
+          });
         
     
     }
-    handleRegisterFieldChange = (evt) => {
-        const stateToChange = {}
-        stateToChange[evt.target.id] = evt.target.value
-        this.setState(stateToChange)
-    }
 
+
+    // handleRegisterFieldChange = (evt) => {
+    //     const stateToChange = {}
+    //     stateToChange[evt.target.id] = evt.target.value
+    //     this.setState(stateToChange)
+    // }
+
+    handleRegisterUserNameChange = (e) => {
+        this.setState({ userName: e.target.value})
+    }
+    handleRegisterEmailChange = (e) => {
+        this.setState({ email: e.target.value})
+    }
       
     render() {
         return (
@@ -97,28 +105,33 @@ export default class Login extends Component {
             </form>
 
             <br></br>
-
             <form onSubmit={this.handleRegister}>
             <h2 className="h2 mb-3 font-weight-normal">Register</h2>
             <h6 className="h6 mb-3 font-weight-normal">If you are a new user, please register here</h6>
             <label htmlFor="inputUserName">
             UserName:
             </label>
-            <input onChange={this.handleRegisterFieldChange} type="text"
+            
+            {/* <input type="text" id="userName" value={this.state.userName} onChange={this.handleRegisterUserNameChange} placeholder="UserName" /> */}
+
+            
+            <input onChange={this.handleRegisterUserNameChange} type="text"
             id="userName"
             placeholder="Register Username"
             required="" autoFocus="" />
             <label htmlFor="inputEmail">
             Email:
             </label>
-            <input onChange={this.handleRegisterFieldChange} type="email"
+
+             {/* <input type="email" id="email" value={this.state.email} onChange={this.handleRegisterEmailChange} placeholder="email" /> */}
+
+            <input onChange={this.handleRegisterEmailChange} type="email"
             id="email"
             placeholder="Register Email"
             required="" autoFocus="" />
+
             
-            
-            <button type ="submit"onClick={() => window.location.reload()
-            }>
+            <button type ="submit"onClick={() => window.location.reload()}>
             Register New User
             </button>
             
