@@ -11,21 +11,21 @@ export default class DrinkList extends Component {
   };
   // Here, my DOM is being set up with the data from 'state'.
   // I'm essentially setting state.
-//   componentDidMount() {
-//     Database.getAllDrinks().then(drinks => {
-//       this.setState({ drinks: drinks });
-//     });
-//   }
+  //   componentDidMount() {
+  //     Database.getAllDrinks().then(drinks => {
+  //       this.setState({ drinks: drinks });
+  //     });
+  //   }
 
-// I re-wrote the above code because that was causing ALL the drinks to load
-// no matter which user was logged in. I only want a user to see their own drinks.
-componentDidMount() {
-    let userId = Database.getIdOfCurrentUser()
+  // I re-wrote the above code because that was causing ALL the drinks to load
+  // no matter which user was logged in. I only want a user to see their own drinks.
+  componentDidMount() {
+    let userId = Database.getIdOfCurrentUser();
     Database.getUserDrink("drinks", userId)
     .then(drinks => {
-        this.setState({ drinks: drinks})
-    })
-}
+      this.setState({ drinks: drinks });
+    });
+  }
   handleEditADrink = (drinkId, drinkToEdit) => {
     return Database.updateOneDrink(drinkId, drinkToEdit)
       .then(() => {
@@ -44,8 +44,7 @@ componentDidMount() {
     this.setState(stateToChange);
     // showAddDrinkForm: false
   };
-  // This code gets the username data so React will have a way
-  // to know which user each drink belongs to.
+  // This code gets the username data so React will know which user each drink belongs to.
   getUserNameByUserId = userId => {
     Database.getUserNameByUserId(userId).then(userName =>
       this.setState({ drink: userName })
@@ -59,36 +58,43 @@ componentDidMount() {
       DrinkLiquor: this.state.DrinkLiquor,
       DrinkMixer: this.state.DrinkMixer,
       DrinkInstructions: this.state.DrinkInstructions,
-      userId: Database.getIdOfCurrentUser(),
-    //   showAddDrinkForm:true
+      userId: Database.getIdOfCurrentUser()
+      //   showAddDrinkForm:true
     };
-    console.log(drink.target)
-    const allInputs=document.querySelectorAll("#drinkForm input")
-    console.log(allInputs)
+    console.log(drink.target);
+    const allInputs = document.querySelectorAll("#drinkForm input");
+    console.log(allInputs);
     allInputs.forEach(input => {
-        input.value=""
-    })
-    
-    
-
-// Adds the new drink to the database and resets state (state includes the new list of drinks AND the 
-// the showAddDrinkForm state of false, so that the add form will no longer show up after the save button is clicked.
-    Database.addDrink(newObject).then(DrinkList => {
-      this.setState({ drinks: DrinkList, showAddDrinkForm: false });
+      input.value = "";
     });
-    console.log("newObject", newObject);    
+
+    // Adds the new drink to the database and resets state (state includes the new list of drinks AND the
+    // the showAddDrinkForm state of false, so that the add form will no longer show up after the save button is clicked.
+    Database.addDrink(newObject)
+    .then(DrinkList => {
+      // Earlier I was getting ALL drinks after saving a new drink. I needed to get user drinks with
+      // userId argument. So I needed the same block of code from 'component did mount' above instead of asking
+      // for all drinks like I was previously. This fixed my issue.
+      let userId = Database.getIdOfCurrentUser();
+    Database.getUserDrink("drinks", userId)
+    .then(drinks => {
+      this.setState({ drinks: drinks, showAddDrinkForm: false });
+    });
+    });
+    console.log("newObject", newObject);
+    
   };
-//   Function for making the add new drink form display
+  //   Function for making the add new drink form display
   showAddForm = () =>
     this.setState({
-        showAddDrinkForm: true
-      });
-// I wrote this function to hide the add drink form which worked, but it didn't allow the new drink to save
-// in the database because it had to be called with the submit button, which lives within the form.
-    //   hideAddForm = () =>
-    //   this.setState({
-    //     showAddDrinkForm: false
-    //   });
+      showAddDrinkForm: true
+    });
+  // I wrote this function to hide the add drink form which worked, but it didn't allow the new drink to save
+  // in the database because it had to be called with the submit button, which lives within the form.
+  //   hideAddForm = () =>
+  //   this.setState({
+  //     showAddDrinkForm: false
+  //   });
 
   deleteDrink = drinkId => {
     Database.deleteDrink(drinkId)
@@ -98,78 +104,76 @@ componentDidMount() {
 
   // I need to build the form for the user to add a new drink
   render() {
-     return (
-
-      <div 
-      
-      className="drink">
-
-
+    return (
+      <div className="drink">
         {/* This is the button for adding a new drink; clicking this button changes state and
         displays the 'Add drink form' */}
-         <button type="submit" onClick={this.showAddForm}  >Add A New Drink</button> 
-         {this.state.showAddDrinkForm &&  
-         
+        <button type="submit" onClick={this.showAddForm}>
+          Add A New Drink
+        </button>
+        {this.state.showAddDrinkForm && (
+          <form id="drinkForm" onSubmit={this.addDrink.bind(this)}>
+            <h1 id="drink-name" className="h3 mb-3 font-weight-normal">
+              My Drinks
+            </h1>
+            <label htmlFor="DrinkName">Drink Name:</label>
+            <FormGroup>
+              <FormControl
+                onChange={this.drinkFormInput}
+                type="text"
+                id="DrinkName"
+                placeholder="Enter Drink Name"
+                ref="DrinkName"
+                required=""
+                autoFocus=""
+              />
+            </FormGroup>
+            <label htmlFor="DrinkLiquor">Drink Liquors:</label>
+            <FormGroup>
+              <FormControl
+                onChange={this.drinkFormInput}
+                type="text"
+                id="DrinkLiquor"
+                placeholder="Enter Drink Liquors"
+                ref="DrinkLiquor"
+                required=""
+                autoFocus=""
+              />
+            </FormGroup>
+            <label htmlFor="DrinkMixer">Drink Mixers:</label>
+            <FormGroup>
+              <FormControl
+                onChange={this.drinkFormInput}
+                type="text"
+                id="DrinkMixer"
+                placeholder="Enter Drink Mixers"
+                ref="DrinkMixer"
+                required=""
+                autoFocus=""
+              />
+            </FormGroup>
+            <label htmlFor="DrinkInstructions">Drink Instructions:</label>
+            <FormGroup>
+              <FormControl
+                onChange={this.drinkFormInput}
+                type="text"
+                id="DrinkInstructions"
+                placeholder="Enter Drink Instructions"
+                ref="DrinkInstructions"
+                required=""
+                autoFocus=""
+              />
+            </FormGroup>
+            <button
+              type="submit"
+              //   onClick={this.hideAddForm}
+            >
+              Save Drink
+            </button>
+            {/* {this.state.showAddDrinkForm} */}
+          </form>
+        )}
 
-        <form id="drinkForm" onSubmit={this.addDrink.bind(this)}>
-          <h1 id="drink-name" className="h3 mb-3 font-weight-normal">
-            My Drinks
-          </h1>
-          <label htmlFor="DrinkName">Drink Name:</label>
-          <FormGroup>
-            <FormControl
-              onChange={this.drinkFormInput}
-              type="text"
-              id="DrinkName"
-              placeholder="Enter Drink Name"
-              ref="DrinkName"
-              required=""
-              autoFocus=""
-            />
-          </FormGroup>
-          <label htmlFor="DrinkLiquor">Drink Liquors:</label>
-          <FormGroup>
-            <FormControl
-              onChange={this.drinkFormInput}
-              type="text"
-              id="DrinkLiquor"
-              placeholder="Enter Drink Liquors"
-              ref="DrinkLiquor"
-              required=""
-              autoFocus=""
-            />
-          </FormGroup>
-          <label htmlFor="DrinkMixer">Drink Mixers:</label>
-          <FormGroup>
-            <FormControl
-              onChange={this.drinkFormInput}
-              type="text"
-              id="DrinkMixer"
-              placeholder="Enter Drink Mixers"
-              ref="DrinkMixer"
-              required=""
-              autoFocus=""
-            />
-          </FormGroup>
-          <label htmlFor="DrinkInstructions">Drink Instructions:</label>
-          <FormGroup>
-            <FormControl
-              onChange={this.drinkFormInput}
-              type="text"
-              id="DrinkInstructions"
-              placeholder="Enter Drink Instructions"
-              ref="DrinkInstructions"
-              required=""
-              autoFocus=""
-            />
-          </FormGroup>
-          <button type="submit"
-        //   onClick={this.hideAddForm} 
-          >Save Drink</button>
-          {/* {this.state.showAddDrinkForm} */}
-        </form>
-         }
-         
         {this.state.drinks.map(drink => (
           <Drink
             key={drink.id}

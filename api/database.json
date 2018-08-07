@@ -9,6 +9,21 @@
       "userName": "Joe",
       "email": "joe@joe.com",
       "id": 2
+    },
+    {
+      "userName": "sally",
+      "email": "sally@sally.com",
+      "id": 3
+    },
+    {
+      "userName": " ",
+      "email": " ",
+      "id": 4
+    },
+    {
+      "userName": " ",
+      "email": " ",
+      "id": 5
     }
   ],
   "drinks": [
@@ -46,24 +61,11 @@
     },
     {
       "DrinkName": "Test's drink",
-      "DrinkLiquor": "any liquor for test user",
-      "DrinkMixer": "any ",
-      "userId": 1,
-      "id": 11
-    },
-    {
-      "DrinkName": "Test's drink",
       "DrinkLiquor": "this work",
       "DrinkMixer": "now",
       "DrinkInstructions": "for test user",
       "userId": 1,
       "id": 12
-    },
-    {
-      "DrinkName": "test's drink",
-      "DrinkLiquor": "any liquor",
-      "userId": 1,
-      "id": 13
     },
     {
       "DrinkName": "Test drink",
@@ -72,6 +74,11 @@
       "DrinkInstructions": "test",
       "userId": 1,
       "id": 14
+    },
+    {
+      "DrinkName": "test drink again",
+      "userId": 1,
+      "id": 15
     }
   ]
 }

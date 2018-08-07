@@ -42,7 +42,7 @@ const Database = Object.create({}, {
             })
             // Then I need to return this fetch after my new drink is added
             .then(() => {
-                return fetch("http://localhost:5002/drinks")
+                return fetch("http://localhost:5002/drinks?_expand=user")
             })
             // Here, I am setting the new state with my new drink
             .then(a => a.json())

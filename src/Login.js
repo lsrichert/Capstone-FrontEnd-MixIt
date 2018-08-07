@@ -54,14 +54,14 @@ export default class Login extends Component {
       };
       handleRegister = (e) => {
         e.preventDefault()
-        let newUser = {
+        let regUser = {
             userName: this.state.userName,
             email: this.state.email
         }
-        Database.postUser("user", newUser)
-        .then(() => {
-            this.stateToChange
-        })
+        // Database.addUser(regUser).then(user => {
+        //     this.setState({ users: user });
+        //   });
+        
     
     }
     handleRegisterFieldChange = (evt) => {
@@ -69,6 +69,7 @@ export default class Login extends Component {
         stateToChange[evt.target.id] = evt.target.value
         this.setState(stateToChange)
     }
+
       
     render() {
         return (
@@ -99,7 +100,7 @@ export default class Login extends Component {
 
             <form onSubmit={this.handleRegister}>
             <h2 className="h2 mb-3 font-weight-normal">Register</h2>
-            <h5 className="h5 mb-3 font-weight-normal">If you are a new user, please register here</h5>
+            <h6 className="h6 mb-3 font-weight-normal">If you are a new user, please register here</h6>
             <label htmlFor="inputUserName">
             UserName:
             </label>
