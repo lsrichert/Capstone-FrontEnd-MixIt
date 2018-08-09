@@ -1,6 +1,10 @@
 import React, { Component } from "react"
 import APIManager from "./APIManager"
 import Database from "./APIManager";
+import { Button } from "reactstrap";
+import { FormControl, FormGroup } from "react-bootstrap";
+
+
 
 
 export default class Login extends Component {
@@ -81,9 +85,10 @@ export default class Login extends Component {
       
     render() {
         return (
-            <div className="login">
+            <div className="loginRegister">
             <form onSubmit={this.handleLogin}>
             <h2 className="h2 mb-3 font-weight-normal">Sign In</h2>
+            <FormGroup>
             <label htmlFor="inputUserName">
             UserName:
             </label>
@@ -98,10 +103,11 @@ export default class Login extends Component {
             id="email"
             placeholder="Enter Email"
             required="" autoFocus="" />
-            <button type ="submit"onClick={() => window.location.reload()
+            <Button type ="submit" color="primary" onClick={() => window.location.reload()
             }>
             Log In
-            </button> 
+            </Button> 
+            </FormGroup>
             </form>
 
             <br></br>
@@ -111,9 +117,6 @@ export default class Login extends Component {
             <label htmlFor="inputUserName">
             UserName:
             </label>
-            
-            {/* <input type="text" id="userName" value={this.state.userName} onChange={this.handleRegisterUserNameChange} placeholder="UserName" /> */}
-
             
             <input onChange={this.handleRegisterUserNameChange} type="text"
             id="userName"
@@ -131,9 +134,9 @@ export default class Login extends Component {
             required="" autoFocus="" />
 
             
-            <button type ="submit"onClick={() => window.location.reload()}>
+            <Button type ="submit" color="primary" onClick={() => window.location.reload()}>
             Register New User
-            </button>
+            </Button>
             
             </form>
             </div>

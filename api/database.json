@@ -41,14 +41,6 @@
       "id": 6
     },
     {
-      "DrinkName": "Joe's drink",
-      "DrinkLiquor": "best liquor",
-      "DrinkMixer": "best mixer",
-      "DrinkInstructions": "shake it a lot",
-      "userId": 2,
-      "id": 7
-    },
-    {
       "DrinkName": "Test's drink",
       "DrinkLiquor": "any liquor",
       "DrinkMixer": "any mixer",
@@ -95,9 +87,27 @@
       "id": 18
     },
     {
-      "DrinkName": "joes drinkkkkk",
+      "DrinkName": "joe drink",
       "userId": 2,
       "id": 19
+    },
+    {
+      "DrinkName": "joe drink",
+      "userId": 2,
+      "id": 20
+    },
+    {
+      "DrinkName": "joe drink",
+      "userId": 2,
+      "id": 21
+    },
+    {
+      "userId": 2,
+      "id": 22
+    },
+    {
+      "userId": 2,
+      "id": 23
     }
   ]
 }

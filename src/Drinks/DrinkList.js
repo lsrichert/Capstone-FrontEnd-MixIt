@@ -102,6 +102,7 @@ export default class DrinkList extends Component {
     Database.deleteDrink(drinkId)
       // console.log("drinkId", drinkId)
       .then(deletedDrink => this.setState({ drinks: deletedDrink }));
+      
   };
 
   // I need to build the form for the user to add a new drink
@@ -166,12 +167,12 @@ export default class DrinkList extends Component {
                 autoFocus=""
               />
             </FormGroup>
-            <button
+            <Button
               type="submit"
               //   onClick={this.hideAddForm}
             >
               Save Drink
-            </button>
+            </Button>
             {/* {this.state.showAddDrinkForm} */}
           </form>
         )}
