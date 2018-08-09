@@ -85,9 +85,15 @@ export default class Login extends Component {
       
     render() {
         return (
-            <div className="loginRegister">
+            
+
+            <div id="loginRegister">
+            {/* <image id="loginImage"
+            src="url(Canva\ -\ Glass\,\ Martini\,\ Cocktail\,\ Cocktail\ Glass\,\ Highball.jpg)"
+            /> */}
             <form onSubmit={this.handleLogin}>
-            <h2 className="h2 mb-3 font-weight-normal">Sign In</h2>
+            <h1 className="welcome">Welcome To MixIt</h1>
+            <h2 className="h2 mb-3 font-weight-normal">Please Sign In</h2>
             <FormGroup>
             <label htmlFor="inputUserName">
             UserName:
@@ -139,8 +145,7 @@ export default class Login extends Component {
             </Button>
             
             </form>
-            </div>
-        
+            </div>        
         )
     }
 }

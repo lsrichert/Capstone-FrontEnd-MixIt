@@ -99,7 +99,7 @@ export default class Drink extends Component {
           <button type="submit">Update Drink</button>
         </form>) : (
           // <div class="card-deck">
-          <div class="p-3" >
+          <div className="p-3" >
           <Col sm="6">
         <Card color="warning">
         <CardTitle>{this.props.drink.DrinkName}</CardTitle>
@@ -109,13 +109,13 @@ export default class Drink extends Component {
         {/* <a href="#" onClick={() => this.props.EditDrink(this.props.drink.id)}>Edit Drink</a> */}
         {/* <a href="#" onClick={() => this.props.deleteDrink(this.props.drink.id)}>Delete Drink</a> */}
         <ButtonGroup>
-        <div class="p-1">
+        <div className="p-1">
 
         <Button color="primary" margin-left onClick={() => this.EditDrink(this.props.drink.id)}>
           Edit Drink
         </Button>
         </div>
-        <div class="p-1">
+        <div className="p-1">
 
         <Button color="primary" margin-left onClick={() => this.props.deleteDrink(this.props.drink.id)}>
           Delete Drink

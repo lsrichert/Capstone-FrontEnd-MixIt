@@ -111,6 +111,7 @@ export default class DrinkList extends Component {
       <div className="drink">
         {/* This is the button for adding a new drink; clicking this button changes state and
         displays the 'Add drink form' */}
+        <div className="p-2"/>
         <Button color="primary" type="submit" onClick={this.showAddForm}>
           Add A New Drink
         </Button>
