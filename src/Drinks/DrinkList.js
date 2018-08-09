@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Drink from "./Drink";
 import Database from "../APIManager";
 import { FormControl, FormGroup } from "react-bootstrap";
+import { Card, Button, CardTitle, CardText } from "reactstrap";
+
 
 export default class DrinkList extends Component {
   state = {
@@ -108,13 +110,13 @@ export default class DrinkList extends Component {
       <div className="drink">
         {/* This is the button for adding a new drink; clicking this button changes state and
         displays the 'Add drink form' */}
-        <button type="submit" onClick={this.showAddForm}>
+        <Button color="primary" type="submit" onClick={this.showAddForm}>
           Add A New Drink
-        </button>
+        </Button>
         {this.state.showAddDrinkForm && (
           <form id="drinkForm" onSubmit={this.addDrink.bind(this)}>
             <h1 id="drink-name" className="h3 mb-3 font-weight-normal">
-              My Drinks
+              Add a New Drink
             </h1>
             <label htmlFor="DrinkName">Drink Name:</label>
             <FormGroup>

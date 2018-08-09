@@ -49,14 +49,6 @@
       "id": 7
     },
     {
-      "DrinkName": "Joe's drink",
-      "DrinkLiquor": "some jack",
-      "DrinkMixer": "some coke",
-      "DrinkInstructions": "mix",
-      "userId": 2,
-      "id": 8
-    },
-    {
       "DrinkName": "Test's drink",
       "DrinkLiquor": "any liquor",
       "DrinkMixer": "any mixer",
@@ -101,6 +93,11 @@
       "DrinkName": "sally sally",
       "userId": 3,
       "id": 18
+    },
+    {
+      "DrinkName": "joes drinkkkkk",
+      "userId": 2,
+      "id": 19
     }
   ]
 }

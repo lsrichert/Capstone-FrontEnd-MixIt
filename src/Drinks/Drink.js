@@ -1,4 +1,4 @@
-import { Card, Button, CardTitle, CardText } from "reactstrap";
+import { Card, Button, CardTitle, CardText, ButtonGroup, ButtonToolbar, Col } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { Component } from "react";
 
@@ -98,20 +98,34 @@ export default class Drink extends Component {
 
           <button type="submit">Update Drink</button>
         </form>) : (
-        <Card body outline color="warning">
+          // <div class="card-deck">
+          <div class="p-3" >
+          <Col sm="6">
+        <Card color="warning">
         <CardTitle>{this.props.drink.DrinkName}</CardTitle>
         <CardText>{this.props.drink.DrinkLiquor}</CardText>
         <CardText>{this.props.drink.DrinkMixer}</CardText>
         <CardText>{this.props.drink.DrinkInstructions}</CardText>
         {/* <a href="#" onClick={() => this.props.EditDrink(this.props.drink.id)}>Edit Drink</a> */}
         {/* <a href="#" onClick={() => this.props.deleteDrink(this.props.drink.id)}>Delete Drink</a> */}
-        <button onClick={() => this.EditDrink(this.props.drink.id)}>
+        <ButtonGroup>
+        <div class="p-1">
+
+        <Button color="primary" margin-left onClick={() => this.EditDrink(this.props.drink.id)}>
           Edit Drink
-        </button>
-        <button onClick={() => this.props.deleteDrink(this.props.drink.id)}>
+        </Button>
+        </div>
+        <div class="p-1">
+
+        <Button color="primary" margin-left onClick={() => this.props.deleteDrink(this.props.drink.id)}>
           Delete Drink
-        </button>
+        </Button>
+        </div>
+        </ButtonGroup>
       </Card>
+      </Col>
+      </div>
+      // </div>
     )
           }
       </div>

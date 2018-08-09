@@ -8,12 +8,44 @@ body {
   background-color: goldenrod;
 }
 
-#header-title {
+.header {
   background-color: gray;
+  padding: 25px;
 }
 
 #drink-name {
-  border: 4px solid white;
+  border: 4px solid black;
   margin: 3px;
   text-align: center;
+  padding: 15px;
 }
+
+#header-title {
+  text-align: center;
+  font-size: 5em;
+}
+
+#header-description {
+  text-align: center;
+}
+
+.login {
+  background-color: gray;
+}
+
+/* .card {
+  width: 30em;
+  background-color: #BBBB97;
+  padding: 10px;
+} */
+
+#root {
+  background-color: #BBBB97
+}
+/* .card-deck { */
+  /* padding: 10px; */
+/* } */
+
+/* #email {
+  text-align: left;
+} */
