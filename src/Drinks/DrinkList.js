@@ -33,10 +33,17 @@ export default class DrinkList extends Component {
       .then(() => {
         return Database.getAllDrinks();
       })
+      // Added this code because I was getting ALL the drinks after editing
+      // a drink and clicking update. I needed to get only that user's drinks
+      // and THEN set state. 
+      let userId = Database.getIdOfCurrentUser()
+      Database.getUserDrink("drinks", userId)
       .then(drinks => {
+
         this.setState({ drinks: drinks });
       });
   };
+
 
   // This function enables me to input new drink details and
   // then prepare to change state with the new drink.
@@ -98,12 +105,26 @@ export default class DrinkList extends Component {
   //     showAddDrinkForm: false
   //   });
 
+  
+  // Added this code because I was getting ALL the drinks after deleting
+      // a drink. I needed to get only that user's drinks after the delete
+      // and THEN set state. I was setting state before getting the user's drinks,
+      // which returned all drinks.
   deleteDrink = drinkId => {
     Database.deleteDrink(drinkId)
       // console.log("drinkId", drinkId)
-      .then(deletedDrink => this.setState({ drinks: deletedDrink }));
+      .then(deletedDrink => 
+      {
+        let userId = Database.getIdOfCurrentUser()
+      Database.getUserDrink("drinks", userId)
+      .then(drinks => {
+        this.setState({ drinks: drinks });
+      });
+      }
+      );
+    };
+    
       
-  };
 
   // I need to build the form for the user to add a new drink
   render() {
@@ -112,7 +133,7 @@ export default class DrinkList extends Component {
         {/* This is the button for adding a new drink; clicking this button changes state and
         displays the 'Add drink form' */}
         <div className="p-2"/>
-        <Button color="primary" type="submit" onClick={this.showAddForm}>
+        <Button color="secondary" type="submit" onClick={this.showAddForm}>
           Add A New Drink
         </Button>
         {this.state.showAddDrinkForm && (

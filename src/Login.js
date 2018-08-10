@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import APIManager from "./APIManager"
 import Database from "./APIManager";
 import { Button } from "reactstrap";
-import { FormControl, FormGroup } from "react-bootstrap";
+import { FormGroup } from "react-bootstrap";
 
 
 
@@ -88,9 +88,6 @@ export default class Login extends Component {
             
 
             <div id="loginRegister">
-            {/* <image id="loginImage"
-            src="url(Canva\ -\ Glass\,\ Martini\,\ Cocktail\,\ Cocktail\ Glass\,\ Highball.jpg)"
-            /> */}
             <form onSubmit={this.handleLogin}>
             <h1 className="welcome">Welcome To MixIt</h1>
             <h2 className="h2 mb-3 font-weight-normal">Please Sign In</h2>
@@ -131,8 +128,6 @@ export default class Login extends Component {
             <label htmlFor="inputEmail">
             Email:
             </label>
-
-             {/* <input type="email" id="email" value={this.state.email} onChange={this.handleRegisterEmailChange} placeholder="email" /> */}
 
             <input onChange={this.handleRegisterEmailChange} type="email"
             id="email"

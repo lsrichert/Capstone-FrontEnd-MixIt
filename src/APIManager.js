@@ -78,9 +78,9 @@ const Database = Object.create({}, {
                 method: "DELETE"
             })
             // When the delete is finished, return this fetch 
-            .then(() => {
-                return fetch("http://localhost:5002/drinks?_expand=user")
-            })
+            // .then(() => {
+            //     return fetch("http://localhost:5002/drinks?_expand=user")
+            // })
             // Once the new list of drinks is retrieved, set the new state
             .then(a => a.json())
         }

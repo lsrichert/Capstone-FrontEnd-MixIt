@@ -1,6 +1,9 @@
 import { Card, Button, CardTitle, CardText, ButtonGroup, ButtonToolbar, Col } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { Component } from "react";
+import Database from "../APIManager";
+import { SketchPicker } from "react-color";
+
 
 export default class Drink extends Component {
   state = {
@@ -39,6 +42,7 @@ export default class Drink extends Component {
           showForm: true
         });
       });
+      
   };
 
   handleFieldChange = (event) => {
@@ -98,10 +102,10 @@ export default class Drink extends Component {
 
           <button type="submit">Update Drink</button>
         </form>) : (
-          // <div class="card-deck">
+          // <div className="card-body">
           <div className="p-3" >
           <Col sm="6">
-        <Card color="warning">
+        <Card body inverse style={{ backgroundColor: '#C98B10', borderColor: 'warning' }}>
         <CardTitle>{this.props.drink.DrinkName}</CardTitle>
         <CardText>{this.props.drink.DrinkLiquor}</CardText>
         <CardText>{this.props.drink.DrinkMixer}</CardText>
@@ -111,13 +115,13 @@ export default class Drink extends Component {
         <ButtonGroup>
         <div className="p-1">
 
-        <Button color="primary" margin-left onClick={() => this.EditDrink(this.props.drink.id)}>
+        <Button color="secondary" margin-left onClick={() => this.EditDrink(this.props.drink.id)}>
           Edit Drink
         </Button>
         </div>
         <div className="p-1">
 
-        <Button color="primary" margin-left onClick={() => this.props.deleteDrink(this.props.drink.id)}>
+        <Button color="secondary" margin-left onClick={() => this.props.deleteDrink(this.props.drink.id)}>
           Delete Drink
         </Button>
         </div>
