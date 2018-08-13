@@ -132,14 +132,14 @@ export default class DrinkList extends Component {
       <div className="drink">
         {/* This is the button for adding a new drink; clicking this button changes state and
         displays the 'Add drink form' */}
-        <div className="p-2"/>
+        <div className="p-3"/>
         <Button color="secondary" type="submit" onClick={this.showAddForm}>
           Add A New Drink
         </Button>
         {this.state.showAddDrinkForm && (
           <form id="drinkForm" onSubmit={this.addDrink.bind(this)}>
             <h1 id="drink-name" className="h3 mb-3 font-weight-normal">
-              Add a New Drink
+              New Drink
             </h1>
             <label htmlFor="DrinkName">Drink Name:</label>
             <FormGroup>

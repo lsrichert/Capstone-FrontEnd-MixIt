@@ -1,36 +1,49 @@
 #root {
-  position: sticky;
-  height: 100%;
-  background-image: url("Cocktail-Bar.jpg");
-  background-size: cover;
+  display: grid;
+  /* position: absolute;
+  height: 100%; */
+  /* background-image: url("moscow-mule.jpg"); */
+  /* background-size: cover;
   background-position: center;
-  min-height: 100%;
-  min-width: 1024px;
-  width: 100%;
+  min-height: 100%; */
+  /* min-width: 1024px; */
+  /* width: 100%;
   height: auto;
   top: 0;
-  left: 0;
+  left: 0;  */
 } 
 
 body {
+  background-image: url("apple-drink.jpg");
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  min-height: 100%;
+  /* height: auto; */
+  top: 0;
+  left: 0; 
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  width: 1024px;
 }
 
 #drinkForm {
-  background-color: #C5CBD3;
-  max-width: 20%;
+  background-color: #D6BDAD;
+  max-width: 50%;
 }
 
-/* .header {
+.header {
+  position: fixed;
   background-color: gray;
   padding: 25px;
   max-height: 10em;
-} */
+  width: 100%;
+  z-index: 2;
+}
 
 #drink-name {
-  border: 2px solid black;
   margin: 3px;
   text-align: center;
   padding: 15px;
@@ -42,9 +55,12 @@ body {
 #header-title {
   text-align: center;
   font-size: 8em;
-  background-color: #C5CBD3;
-  width: 4em center;
+  background-color: #BCBD8B;
+  max-width: 4em center;
   font-family: 'Kaushan Script', cursive;
+  border-radius: 50%;
+  /* max-width: 15% center; */
+
 
   /* border-radius: 50px; */
   /* margin: 25%; */
@@ -70,23 +86,32 @@ body {
 
 }
 .form-group {
-  width: 200px;
+  width: 300px;
+  padding: 5px;
 }
+
 .form {
-  width: 200px;
+  width: 400px;
 }
+
 .welcome {
   text-align: center;
   border: black solid 8px;
 }
-/* .card-body {
-  padding: 3px;
-} */
+.drink {
+  padding: 50px;
+  margin-left: 5%;
+  margin-top: 10%;
+  
+}
 
 /* .card {
   width: 30em;
   background-color: #BBBB97;
   padding: 10px;
+  grid-row-start: 6;
+  grid-column-start: 6;
+  z-index: 1
 } */
 
 
