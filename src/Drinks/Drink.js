@@ -63,7 +63,7 @@ export default class Drink extends Component {
             onChange={this.handleFieldChange}
             type="text"
             id="DrinkName"
-            placeholder="Edit Drink Name"
+            placeholder="Edit Name"
             value={this.state.drinkToEdit.DrinkName}
             required=""
             autoFocus=""
@@ -73,7 +73,7 @@ export default class Drink extends Component {
             onChange={this.handleFieldChange}
             type="text"
             id="DrinkLiquor"
-            placeholder="Edit Drink Liquors"
+            placeholder="Edit Liquor"
             value={this.state.drinkToEdit.DrinkLiquor}
             required=""
             autoFocus=""
@@ -83,7 +83,7 @@ export default class Drink extends Component {
             onChange={this.handleFieldChange}
             type="text"
             id="DrinkMixer"
-            placeholder="Edit Drink Mixers"
+            placeholder="Edit Mixers"
             value={this.state.drinkToEdit.DrinkMixer}
             required=""
             autoFocus=""
@@ -93,15 +93,15 @@ export default class Drink extends Component {
             onChange={this.handleFieldChange}
             type="text"
             id="DrinkInstructions"
-            placeholder="Edit Drink Instructions"
+            placeholder="Edit Instructions"
             value={this.state.drinkToEdit.DrinkInstructions}
             required=""
             autoFocus=""
           />
 
-          <button type="submit">Update Drink</button>
+          <Button type="submit">Update Drink</Button>
         </form>) : (
-          <div className="container">
+          // <div className="container">
           <div className="p-3" >
           {/* <CardColumns> */}
           <Container>
@@ -133,7 +133,7 @@ export default class Drink extends Component {
       {/* </CardColumns> */}
 
       </div>
-      </div>
+      // </div>
     )
           }
       </div>
