@@ -226,6 +226,22 @@
     {
       "userId": 3,
       "id": 67
+    },
+    {
+      "userId": 3,
+      "id": 68
+    },
+    {
+      "DrinkName": "any drink",
+      "DrinkLiquor": "any liquor",
+      "DrinkMixer": "a mixer",
+      "DrinkInstructions": "shake it real good",
+      "userId": 3,
+      "id": 69
+    },
+    {
+      "userId": 1,
+      "id": 70
     }
   ]
 }

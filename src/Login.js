@@ -1,8 +1,8 @@
 import React, { Component } from "react"
 import APIManager from "./APIManager"
 import Database from "./APIManager";
-import { Button } from "reactstrap";
-import { FormGroup } from "react-bootstrap";
+import { Button, Form, Label, Input } from "reactstrap";
+import { FormControl, FormGroup } from "react-bootstrap";
 
 
 
@@ -90,57 +90,63 @@ export default class Login extends Component {
             <div id="loginRegister">
             <form onSubmit={this.handleLogin}>
             <h1 className="welcome">Welcome To MixIt</h1>
-            <h2 className="h2 mb-3 font-weight-normal">Please Sign In</h2>
+            <div className="login">Please Sign In</div>
+            <Form>
             <FormGroup>
-            <label htmlFor="inputUserName">
+            {/* <Label htmlFor="inputUserName">
             UserName:
-            </label>
-            <input onChange={this.handleFieldChange} type="text"
+            </Label> */}
+            <Input onChange={this.handleFieldChange} type="text"
             id="userName"
             placeholder="Enter Username"
             required="" autoFocus="" />
-            <label htmlFor="inputEmail">
+            {/* <Label htmlFor="inputEmail">
             Email:
-            </label>
-            <input onChange={this.handleFieldChange} type="email"
+            </Label> */}
+            <Input onChange={this.handleFieldChange} type="email"
             id="email"
             placeholder="Enter Email"
             required="" autoFocus="" />
-            <Button type ="submit" color="primary" onClick={() => window.location.reload()
+            <Button type ="submit" color="secondary" onClick={() => window.location.reload()
             }>
             Log In
             </Button> 
             </FormGroup>
+            </Form>
             </form>
 
             <br></br>
+
+            <Form>
+                <FormGroup>
             <form onSubmit={this.handleRegister}>
-            <h2 className="h2 mb-3 font-weight-normal">Register</h2>
-            <h6 className="h6 mb-3 font-weight-normal">If you are a new user, please register here</h6>
-            <label htmlFor="inputUserName">
+            <div className="register">New Users</div>
+            {/* <Label htmlFor="inputUserName">
             UserName:
-            </label>
+            </Label> */}
             
-            <input onChange={this.handleRegisterUserNameChange} type="text"
+            <Input onChange={this.handleRegisterUserNameChange} type="text"
             id="userName"
             placeholder="Register Username"
             required="" autoFocus="" />
-            <label htmlFor="inputEmail">
+            {/* <Label htmlFor="inputEmail">
             Email:
-            </label>
+            </Label> */}
 
-            <input onChange={this.handleRegisterEmailChange} type="email"
+            <Input onChange={this.handleRegisterEmailChange} type="email"
             id="email"
             placeholder="Register Email"
             required="" autoFocus="" />
 
             
-            <Button type ="submit" color="primary" onClick={() => window.location.reload()}>
+            <Button type ="submit" color="secondary" onClick={() => window.location.reload()}>
             Register New User
             </Button>
             
             </form>
-            </div>        
+            </FormGroup>
+            </Form>
+            </div>
         )
     }
 }

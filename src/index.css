@@ -1,27 +1,16 @@
 #root {
   display: grid;
-  /* position: absolute;
-  height: 100%; */
-  /* background-image: url("moscow-mule.jpg"); */
-  /* background-size: cover;
-  background-position: center;
-  min-height: 100%; */
-  /* min-width: 1024px; */
-  /* width: 100%;
-  height: auto;
-  top: 0;
-  left: 0;  */
 } 
 
 body {
-  background-image: url("apple-drink.jpg");
+  background-image: url("moscow-mule.jpg");
   background-attachment: fixed;
   position: relative;
   width: 100%;
   background-size: cover;
   background-position: center;
   min-height: 100%;
-  /* height: auto; */
+  height: auto;
   top: 0;
   left: 0; 
   margin: 0;
@@ -71,9 +60,21 @@ body {
   text-align: center;
 } */
 
+.login {
+  font-size: 25px;
+}
+
+.register {
+  font-size: 25px;
+  /* margin-top: 25%; */
+
+
+
+}
+
 #loginRegister {
   height: 100%;
-  background-image: url("Canva\ -\ Glass\,\ Martini\,\ Cocktail\,\ Cocktail\ Glass\,\ Highball.jpg");
+  background-image: url("creamy-drink.jpg");
   background-size: cover;
   background-position: center;
   min-height: 100%;
@@ -83,6 +84,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  background-attachment: fixed;
 
 
 }
@@ -97,7 +99,11 @@ body {
 
 .welcome {
   text-align: center;
-  border: black solid 8px;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 9em;
+  background-color: #C98B10;
+
+  /* border: black solid 8px; */
 }
 .drink {
   padding: 50px;
