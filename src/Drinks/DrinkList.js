@@ -132,58 +132,56 @@ export default class DrinkList extends Component {
       <div className="drink">
         {/* This is the button for adding a new drink; clicking this button changes state and
         displays the 'Add drink form' */}
-        <div className="p-3"/>
+        <div className="p-2"/>
         <Button color="secondary" type="submit" onClick={this.showAddForm}>
           Add A New Drink
         </Button>
         {this.state.showAddDrinkForm && (
           <form id="drinkForm" onSubmit={this.addDrink.bind(this)}>
-            <h1 id="drink-name" className="h3 mb-3 font-weight-normal">
-              New Drink
-            </h1>
-            <label htmlFor="DrinkName">Drink Name:</label>
+           
+            <label htmlFor="DrinkName">Name of Drink:</label>
             <FormGroup>
               <FormControl
                 onChange={this.drinkFormInput}
                 type="text"
                 id="DrinkName"
-                placeholder="Enter Drink Name"
+                placeholder="Enter Name of Drink"
                 ref="DrinkName"
                 required=""
                 autoFocus=""
               />
             </FormGroup>
-            <label htmlFor="DrinkLiquor">Drink Liquors:</label>
+            <label htmlFor="DrinkLiquor">Liquor:</label>
             <FormGroup>
               <FormControl
                 onChange={this.drinkFormInput}
                 type="text"
                 id="DrinkLiquor"
-                placeholder="Enter Drink Liquors"
+                placeholder="Enter Liquors"
                 ref="DrinkLiquor"
                 required=""
                 autoFocus=""
               />
             </FormGroup>
-            <label htmlFor="DrinkMixer">Drink Mixers:</label>
+            <label htmlFor="DrinkMixer">Mixer:</label>
             <FormGroup>
               <FormControl
                 onChange={this.drinkFormInput}
                 type="text"
                 id="DrinkMixer"
-                placeholder="Enter Drink Mixers"
+                placeholder="Enter Mixers"
                 ref="DrinkMixer"
                 required=""
                 autoFocus=""
               />
             </FormGroup>
-            <label htmlFor="DrinkInstructions">Drink Instructions:</label>
+            <label htmlFor="DrinkInstructions">Instructions:</label>
             <FormGroup>
               <FormControl
                 onChange={this.drinkFormInput}
                 type="text"
                 id="DrinkInstructions"
-                placeholder="Enter Drink Instructions"
+                placeholder="Enter Instructions"
                 ref="DrinkInstructions"
                 required=""
                 autoFocus=""

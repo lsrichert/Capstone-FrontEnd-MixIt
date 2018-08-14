@@ -8,7 +8,7 @@ body {
   position: relative;
   width: 100%;
   background-size: cover;
-  background-position: center;
+  background-position: 40px 100px;
   min-height: 100%;
   height: auto;
   top: 0;
@@ -19,63 +19,71 @@ body {
   width: 1024px;
 }
 
+/* styling for the 'add drink' form */
 #drinkForm {
-  background-color: #D6BDAD;
+  background-color: #A29587;
+  font-weight: bold;
   max-width: 50%;
+  margin-top: 2%;
 }
 
+/* styling for the solid banner behind 'MixIt' on main page */
 .header {
   position: fixed;
-  background-color: gray;
-  /* padding: 2px; */
-  max-height: 12em;
+  background-color: #A29587;
+  max-height: 10em;
   width: 100%;
   z-index: 2;
+  background-attachment: fixed;
 }
 
-#drink-name {
+/* #drink-name {
   margin: 3px;
-  text-align: center;
+  text-align: left;
   padding: 15px;
-  font-family: 'Do Hyeon', sans-serif;
-  font-size: 3em;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 20px;
 
-}
-
+} */
+/* styling for 'MixIt' at top of main page */
 #header-title {
   text-align: center;
-  font-size: 10em;
-  /* background-color: #BCBD8B; */
-  max-width: 4em center;
+  font-size: 11em;
+  /* background-color: #A29587; */
+  max-width: 2em center;
   font-family: 'Kaushan Script', cursive;
-  margin-top: 0%;
+  margin-top: -2%;
   /* border-radius: 50%; */
-  /* max-width: 15% center; */
-
-
-  /* border-radius: 50px; */
-  /* margin: 25%; */
+  background-attachment: fixed;
 }
 
-/* #header-description {
+#app-description {
   text-align: center;
-} */
-
-.login {
-  font-size: 25px;
-}
-
-.register {
-  font-size: 25px;
-  /* margin-top: 25%; */
-
-
+  background-color: #ADB993;
+  max-width: 30%;
+  margin-left: 35%;
+  margin-top: -1%;
+  border-radius: 20px;
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 35px;
 
 }
 
+#app-description-login {
+  text-align: center;
+  background-color: #ADB993;
+  max-width: 30%;
+  margin-left: 35%;
+  margin-top: -1%;
+  border-radius: 20px;
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 35px;
+}
+    
+/* styling for the login page, specifically the background image for login page */
 #loginRegister {
   height: 100%;
-  background-image: url("creamy-drink.jpg");
+  background-image: url("copper-mug.jpg");
   background-size: cover;
   background-position: center;
   min-height: 100%;
@@ -86,26 +94,80 @@ body {
   top: 0;
   left: 0;
   background-attachment: fixed;
-
-
+  z-index: 1;
 }
-.form-group {
+
+/* register user styling on login page */
+.register {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 550px;
+  margin-left: 550px;
+  color: whitesmoke;
+  /* background-color: #A29587; */
+  max-width: 28%;
+}
+
+/* login user styling on login page */
+.login {
+  font-size: 25px;
+  font-weight: bold;
+  color: whitesmoke;
+  margin-top: 165px;
+  margin-left: 550px;
+  /* background-color: #A29587; */
+  max-width: 28%;
+}
+
+.login-header {
+  position: fixed;
+  /* background-color: #C7C7C8; */
+  max-height: 10em;
+  width: 100%;
+  z-index: 2;
+  background-attachment: fixed;
+}
+
+/* .form-group {
   width: 300px;
   padding: 5px;
-}
+  margin-left: 550px;
+  background-color: #A29587;
+} */
 
-.form {
+/* .form {
   width: 400px;
-}
+} */
 
+/* styling for 'Welcome to MixIt' on login page */
 .welcome {
   text-align: center;
   font-family: 'Kaushan Script', cursive;
-  font-size: 9em;
-  background-color: #C98B10;
-
-  /* border: black solid 8px; */
+  text-align: center;
+  font-size: 10em;
+  background-color: #A29587;
+  max-width: 5em center;
+  margin-top: 0%;
+  background-attachment: fixed;
+  /* z-index: 3; */
 }
+
+.login-form {
+  width: 300px;
+  padding: 5px;
+  margin-left: 550px;
+  /* background-color: #A29587; */
+}
+
+.register-form {
+  width: 300px;
+  padding: 5px;
+  margin-left: 550px;
+  /* background-color: #A29587; */
+}
+
+
+
 .drink {
   padding: 50px;
   /* margin-left: 3%; */
