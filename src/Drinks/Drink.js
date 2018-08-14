@@ -105,7 +105,7 @@ export default class Drink extends Component {
           <div className="p-3" >
           {/* <CardColumns> */}
           <Container>
-          <Col xs="10">
+          <Col xs="8">
         <Card body inverse style={{ backgroundColor: '#C98B10', borderColor: 'warning' }}>
         <CardTitle>{this.props.drink.DrinkName}</CardTitle>
         <CardText>{this.props.drink.DrinkLiquor}</CardText>

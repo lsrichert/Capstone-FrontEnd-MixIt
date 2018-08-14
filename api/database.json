@@ -209,27 +209,7 @@
     },
     {
       "userId": 3,
-      "id": 63
-    },
-    {
-      "userId": 3,
-      "id": 64
-    },
-    {
-      "userId": 3,
-      "id": 65
-    },
-    {
-      "userId": 3,
       "id": 66
-    },
-    {
-      "userId": 3,
-      "id": 67
-    },
-    {
-      "userId": 3,
-      "id": 68
     },
     {
       "DrinkName": "any drink",
@@ -242,6 +222,10 @@
     {
       "userId": 1,
       "id": 70
+    },
+    {
+      "userId": 3,
+      "id": 71
     }
   ]
 }

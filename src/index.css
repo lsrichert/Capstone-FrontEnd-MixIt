@@ -3,7 +3,7 @@
 } 
 
 body {
-  background-image: url("moscow-mule.jpg");
+  background-image: url("apple-drink.jpg");
   background-attachment: fixed;
   position: relative;
   width: 100%;
@@ -27,8 +27,8 @@ body {
 .header {
   position: fixed;
   background-color: gray;
-  padding: 25px;
-  max-height: 10em;
+  /* padding: 2px; */
+  max-height: 12em;
   width: 100%;
   z-index: 2;
 }
@@ -44,11 +44,12 @@ body {
 
 #header-title {
   text-align: center;
-  font-size: 8em;
-  background-color: #BCBD8B;
+  font-size: 10em;
+  /* background-color: #BCBD8B; */
   max-width: 4em center;
   font-family: 'Kaushan Script', cursive;
-  border-radius: 50%;
+  margin-top: 0%;
+  /* border-radius: 50%; */
   /* max-width: 15% center; */
 
 
@@ -107,8 +108,8 @@ body {
 }
 .drink {
   padding: 50px;
-  margin-left: 5%;
-  margin-top: 10%;
+  /* margin-left: 3%; */
+  margin-top: 12%;
   
 }
 
