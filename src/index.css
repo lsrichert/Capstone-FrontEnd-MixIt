@@ -1,36 +1,39 @@
 #root {
-  position: sticky;
-  height: 100%;
-  background-image: url("Cocktail-Bar.jpg");
-  background-size: cover;
-  background-position: center;
-  min-height: 100%;
-  min-width: 1024px;
-  width: 100%;
-  height: auto;
-  top: 0;
-  left: 0;
+  display: grid;
 } 
 
 body {
+  background-image: url("apple-drink.jpg");
+  background-attachment: fixed;
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  min-height: 100%;
+  height: auto;
+  top: 0;
+  left: 0; 
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  width: 1024px;
 }
 
 #drinkForm {
-  background-color: #C5CBD3;
-  max-width: 20%;
+  background-color: #D6BDAD;
+  max-width: 50%;
 }
 
-/* .header {
+.header {
+  position: fixed;
   background-color: gray;
-  padding: 25px;
-  max-height: 10em;
-} */
+  /* padding: 2px; */
+  max-height: 12em;
+  width: 100%;
+  z-index: 2;
+}
 
 #drink-name {
-  border: 2px solid black;
   margin: 3px;
   text-align: center;
   padding: 15px;
@@ -41,10 +44,14 @@ body {
 
 #header-title {
   text-align: center;
-  font-size: 8em;
-  background-color: #C5CBD3;
-  width: 4em center;
+  font-size: 10em;
+  /* background-color: #BCBD8B; */
+  max-width: 4em center;
   font-family: 'Kaushan Script', cursive;
+  margin-top: 0%;
+  /* border-radius: 50%; */
+  /* max-width: 15% center; */
+
 
   /* border-radius: 50px; */
   /* margin: 25%; */
@@ -54,9 +61,21 @@ body {
   text-align: center;
 } */
 
+.login {
+  font-size: 25px;
+}
+
+.register {
+  font-size: 25px;
+  /* margin-top: 25%; */
+
+
+
+}
+
 #loginRegister {
   height: 100%;
-  background-image: url("Canva\ -\ Glass\,\ Martini\,\ Cocktail\,\ Cocktail\ Glass\,\ Highball.jpg");
+  background-image: url("creamy-drink.jpg");
   background-size: cover;
   background-position: center;
   min-height: 100%;
@@ -66,27 +85,41 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  background-attachment: fixed;
 
 
 }
 .form-group {
-  width: 200px;
+  width: 300px;
+  padding: 5px;
 }
+
 .form {
-  width: 200px;
+  width: 400px;
 }
+
 .welcome {
   text-align: center;
-  border: black solid 8px;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 9em;
+  background-color: #C98B10;
+
+  /* border: black solid 8px; */
 }
-/* .card-body {
-  padding: 3px;
-} */
+.drink {
+  padding: 50px;
+  /* margin-left: 3%; */
+  margin-top: 12%;
+  
+}
 
 /* .card {
   width: 30em;
   background-color: #BBBB97;
   padding: 10px;
+  grid-row-start: 6;
+  grid-column-start: 6;
+  z-index: 1
 } */
 
 

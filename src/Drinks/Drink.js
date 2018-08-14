@@ -1,4 +1,4 @@
-import { Card, Button, CardTitle, CardText, ButtonGroup, ButtonToolbar, Col } from "reactstrap";
+import { Card, Button, CardTitle, CardText, CardColumns, ButtonGroup, ButtonToolbar, Col, Row, Container } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { Component } from "react";
 import Database from "../APIManager";
@@ -53,11 +53,10 @@ export default class Drink extends Component {
   render() {
     return (
       <div>
+         
         
 
         {this.state.showForm ? (
-
-      
 
         <form onSubmit={this.handleEdit}>
           <input
@@ -102,9 +101,11 @@ export default class Drink extends Component {
 
           <button type="submit">Update Drink</button>
         </form>) : (
-          // <div className="card-body">
+          <div className="container">
           <div className="p-3" >
-          <Col sm="6">
+          {/* <CardColumns> */}
+          <Container>
+          <Col xs="8">
         <Card body inverse style={{ backgroundColor: '#C98B10', borderColor: 'warning' }}>
         <CardTitle>{this.props.drink.DrinkName}</CardTitle>
         <CardText>{this.props.drink.DrinkLiquor}</CardText>
@@ -128,8 +129,11 @@ export default class Drink extends Component {
         </ButtonGroup>
       </Card>
       </Col>
+      </Container>
+      {/* </CardColumns> */}
+
       </div>
-      // </div>
+      </div>
     )
           }
       </div>
