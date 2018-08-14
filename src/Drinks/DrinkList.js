@@ -138,9 +138,7 @@ export default class DrinkList extends Component {
         </Button>
         {this.state.showAddDrinkForm && (
           <form id="drinkForm" onSubmit={this.addDrink.bind(this)}>
-            {/* <h4 id="drink-name" className="h3 mb-3 font-weight-normal">
-              Add New Drink
-            </h4> */}
+           
             <label htmlFor="DrinkName">Name of Drink:</label>
             <FormGroup>
               <FormControl

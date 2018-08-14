@@ -91,9 +91,11 @@ export default class Login extends Component {
             <form onSubmit={this.handleLogin}>
             <div className="login-header">
             <h1 className="welcome">Welcome To MixIt</h1>
+                    <h4 id="app-description-login">The Cocktail Recipe Keeper</h4>
+                {/* Mix It Twice */}
             <div className="login">Please Sign In</div>
             <Form>
-            <FormGroup>
+            <FormGroup className="login-form">
             {/* <Label htmlFor="inputUserName">
             UserName:
             </Label> */}
@@ -127,7 +129,7 @@ export default class Login extends Component {
             UserName:
             </Label> */}
             <Form>
-                <FormGroup>
+                <FormGroup className="register-form">
             
             <Input onChange={this.handleRegisterUserNameChange} type="text"
             id="userName"

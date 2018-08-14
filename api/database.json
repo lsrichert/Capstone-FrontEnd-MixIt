@@ -29,6 +29,11 @@
       "userName": "dave",
       "email": "dave@dave.com",
       "id": 8
+    },
+    {
+      "userName": "ellie",
+      "email": "ellie@ellie.com",
+      "id": 9
     }
   ],
   "drinks": [
@@ -234,6 +239,30 @@
     {
       "userId": 3,
       "id": 97
+    },
+    {
+      "userId": 3,
+      "id": 98
+    },
+    {
+      "userId": 3,
+      "id": 99
+    },
+    {
+      "userId": 3,
+      "id": 100
+    },
+    {
+      "userId": 3,
+      "id": 101
+    },
+    {
+      "DrinkName": "ellie's drink",
+      "DrinkLiquor": "ellie's liquor",
+      "DrinkMixer": "ellie's mixer",
+      "DrinkInstructions": "shake it ellie!!!",
+      "userId": 9,
+      "id": 102
     }
   ]
 }

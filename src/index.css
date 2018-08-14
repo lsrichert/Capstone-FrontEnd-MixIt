@@ -21,7 +21,8 @@ body {
 
 /* styling for the 'add drink' form */
 #drinkForm {
-  background-color: #BDB689;
+  background-color: #A29587;
+  font-weight: bold;
   max-width: 50%;
   margin-top: 2%;
 }
@@ -29,40 +30,56 @@ body {
 /* styling for the solid banner behind 'MixIt' on main page */
 .header {
   position: fixed;
-  background-color: #C7C7C8;
+  background-color: #A29587;
   max-height: 10em;
   width: 100%;
   z-index: 2;
   background-attachment: fixed;
 }
 
-#drink-name {
+/* #drink-name {
   margin: 3px;
   text-align: left;
   padding: 15px;
   font-family: 'PT Sans', sans-serif;
   font-size: 20px;
 
-}
+} */
 /* styling for 'MixIt' at top of main page */
 #header-title {
   text-align: center;
-  font-size: 9em;
-  background-color: #A29587;
-  max-width: 4em center;
+  font-size: 11em;
+  /* background-color: #A29587; */
+  max-width: 2em center;
   font-family: 'Kaushan Script', cursive;
-  margin-top: 0%;
-  border-radius: 50%;
+  margin-top: -2%;
+  /* border-radius: 50%; */
   background-attachment: fixed;
-
-  /* max-width: 25% center; */
 }
 
-/* #header-description {
+#app-description {
   text-align: center;
-  margin-left: 20%;
-} */
+  background-color: #ADB993;
+  max-width: 30%;
+  margin-left: 35%;
+  margin-top: -1%;
+  border-radius: 20px;
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 35px;
 
+}
+
+#app-description-login {
+  text-align: center;
+  background-color: #ADB993;
+  max-width: 30%;
+  margin-left: 35%;
+  margin-top: -1%;
+  border-radius: 20px;
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 35px;
+}
+    
 /* styling for the login page, specifically the background image for login page */
 #loginRegister {
   height: 100%;
@@ -84,7 +101,7 @@ body {
 .register {
   font-size: 25px;
   font-weight: bold;
-  margin-top: 450px;
+  margin-top: 550px;
   margin-left: 550px;
   color: whitesmoke;
   /* background-color: #A29587; */
@@ -96,7 +113,7 @@ body {
   font-size: 25px;
   font-weight: bold;
   color: whitesmoke;
-  margin-top: 100px;
+  margin-top: 165px;
   margin-left: 550px;
   /* background-color: #A29587; */
   max-width: 28%;
@@ -111,34 +128,42 @@ body {
   background-attachment: fixed;
 }
 
-.form-group {
+/* .form-group {
   width: 300px;
   padding: 5px;
   margin-left: 550px;
   background-color: #A29587;
-}
+} */
 
-.form {
+/* .form {
   width: 400px;
-}
+} */
 
 /* styling for 'Welcome to MixIt' on login page */
 .welcome {
   text-align: center;
   font-family: 'Kaushan Script', cursive;
-  font-size: 9em;
-  /* background-color: #C98B10; */
   text-align: center;
-  font-size: 9em;
+  font-size: 10em;
   background-color: #A29587;
-  max-width: 4em center;
-  font-family: 'Kaushan Script', cursive;
+  max-width: 5em center;
   margin-top: 0%;
-  /* border-radius: 30%; */
   background-attachment: fixed;
-  z-index: 3;
+  /* z-index: 3; */
+}
 
-  /* border: black solid 8px; */
+.login-form {
+  width: 300px;
+  padding: 5px;
+  margin-left: 550px;
+  /* background-color: #A29587; */
+}
+
+.register-form {
+  width: 300px;
+  padding: 5px;
+  margin-left: 550px;
+  /* background-color: #A29587; */
 }
 
 
