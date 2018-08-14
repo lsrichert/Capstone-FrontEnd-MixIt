@@ -89,6 +89,7 @@ export default class Login extends Component {
 
             <div id="loginRegister">
             <form onSubmit={this.handleLogin}>
+            <div className="login-header">
             <h1 className="welcome">Welcome To MixIt</h1>
             <div className="login">Please Sign In</div>
             <Form>
@@ -113,17 +114,20 @@ export default class Login extends Component {
             </Button> 
             </FormGroup>
             </Form>
+            </div>
+            
             </form>
 
             <br></br>
 
-            <Form>
-                <FormGroup>
+            
             <form onSubmit={this.handleRegister}>
             <div className="register">New Users</div>
             {/* <Label htmlFor="inputUserName">
             UserName:
             </Label> */}
+            <Form>
+                <FormGroup>
             
             <Input onChange={this.handleRegisterUserNameChange} type="text"
             id="userName"
@@ -143,9 +147,10 @@ export default class Login extends Component {
             Register New User
             </Button>
             
-            </form>
             </FormGroup>
             </Form>
+            </form>
+
             </div>
         )
     }

@@ -19,12 +19,14 @@ body {
   width: 1024px;
 }
 
+/* styling for the 'add drink' form */
 #drinkForm {
   background-color: #BDB689;
   max-width: 50%;
   margin-top: 2%;
 }
 
+/* styling for the solid banner behind 'MixIt' on main page */
 .header {
   position: fixed;
   background-color: #C7C7C8;
@@ -42,7 +44,7 @@ body {
   font-size: 20px;
 
 }
-
+/* styling for 'MixIt' at top of main page */
 #header-title {
   text-align: center;
   font-size: 9em;
@@ -61,22 +63,10 @@ body {
   margin-left: 20%;
 } */
 
-.login {
-  font-size: 25px;
-  /* background-color: white; */
-}
-
-.register {
-  font-size: 25px;
-  /* margin-top: 25%; */
-
-
-
-}
-
+/* styling for the login page, specifically the background image for login page */
 #loginRegister {
   height: 100%;
-  background-image: url("creamy-drink.jpg");
+  background-image: url("copper-mug.jpg");
   background-size: cover;
   background-position: center;
   min-height: 100%;
@@ -87,26 +77,72 @@ body {
   top: 0;
   left: 0;
   background-attachment: fixed;
-
-
+  z-index: 1;
 }
+
+/* register user styling on login page */
+.register {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 450px;
+  margin-left: 550px;
+  color: whitesmoke;
+  /* background-color: #A29587; */
+  max-width: 28%;
+}
+
+/* login user styling on login page */
+.login {
+  font-size: 25px;
+  font-weight: bold;
+  color: whitesmoke;
+  margin-top: 100px;
+  margin-left: 550px;
+  /* background-color: #A29587; */
+  max-width: 28%;
+}
+
+.login-header {
+  position: fixed;
+  /* background-color: #C7C7C8; */
+  max-height: 10em;
+  width: 100%;
+  z-index: 2;
+  background-attachment: fixed;
+}
+
 .form-group {
   width: 300px;
   padding: 5px;
+  margin-left: 550px;
+  background-color: #A29587;
 }
 
 .form {
   width: 400px;
 }
 
+/* styling for 'Welcome to MixIt' on login page */
 .welcome {
   text-align: center;
   font-family: 'Kaushan Script', cursive;
   font-size: 9em;
-  background-color: #C98B10;
+  /* background-color: #C98B10; */
+  text-align: center;
+  font-size: 9em;
+  background-color: #A29587;
+  max-width: 4em center;
+  font-family: 'Kaushan Script', cursive;
+  margin-top: 0%;
+  /* border-radius: 30%; */
+  background-attachment: fixed;
+  z-index: 3;
 
   /* border: black solid 8px; */
 }
+
+
+
 .drink {
   padding: 50px;
   /* margin-left: 3%; */
