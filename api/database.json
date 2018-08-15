@@ -16,21 +16,6 @@
       "id": 3
     },
     {
-      "userName": "jane",
-      "email": "jane@jane.com",
-      "id": 6
-    },
-    {
-      "userName": "test user",
-      "email": "testuser@user.com",
-      "id": 7
-    },
-    {
-      "userName": "dave",
-      "email": "dave@dave.com",
-      "id": 8
-    },
-    {
       "userName": "ellie",
       "email": "ellie@ellie.com",
       "id": 9
@@ -70,11 +55,6 @@
       "id": 14
     },
     {
-      "DrinkName": "test drink again",
-      "userId": 1,
-      "id": 15
-    },
-    {
       "DrinkName": "Whiskey Sour",
       "userId": 3,
       "id": 16,
@@ -99,70 +79,12 @@
       "DrinkInstructions": "Shake and strain"
     },
     {
-      "DrinkName": "joe",
-      "userId": 2,
-      "id": 28
-    },
-    {
-      "DrinkName": "joe needs drinks",
-      "userId": 2,
-      "id": 35
-    },
-    {
-      "DrinkName": "joe needs drinks",
-      "userId": 2,
-      "id": 36
-    },
-    {
-      "DrinkName": "joe needs drinks",
-      "userId": 2,
-      "id": 37
-    },
-    {
-      "DrinkName": "joe",
-      "userId": 2,
-      "id": 38
-    },
-    {
       "DrinkName": "joe's drink",
       "DrinkLiquor": "a liquor, another liquor, and another liquor and something else and something else",
       "DrinkMixer": "lots of mixer and more mixers",
       "DrinkInstructions": "shake",
       "userId": 2,
       "id": 39
-    },
-    {
-      "DrinkName": "joe drink",
-      "DrinkLiquor": "1/2 oz of this liquor, 1 oz of this liquor, 1/4 oz of this liquor",
-      "DrinkMixer": "splash of this mixer, 2 oz of that mixer, dash of this mixer",
-      "DrinkInstructions": "shake it",
-      "userId": 2,
-      "id": 40
-    },
-    {
-      "DrinkName": "dave drink",
-      "userId": 8,
-      "id": 41
-    },
-    {
-      "DrinkName": "drink",
-      "userId": 8,
-      "id": 42
-    },
-    {
-      "DrinkName": "drink",
-      "userId": 8,
-      "id": 43
-    },
-    {
-      "DrinkName": "dd",
-      "userId": 8,
-      "id": 48
-    },
-    {
-      "DrinkName": "dddrrriiinnkk",
-      "userId": 8,
-      "id": 49
     },
     {
       "DrinkName": "Moscow Mule",
@@ -181,14 +103,6 @@
       "id": 54
     },
     {
-      "userId": 8,
-      "id": 55
-    },
-    {
-      "userId": 8,
-      "id": 56
-    },
-    {
       "DrinkName": "any drink",
       "DrinkLiquor": "any liquor",
       "DrinkMixer": "a mixer",
@@ -197,64 +111,12 @@
       "id": 69
     },
     {
-      "userId": 1,
-      "id": 70
-    },
-    {
-      "DrinkName": "drink name",
-      "DrinkLiquor": "any liquor",
-      "DrinkMixer": "any mixer",
-      "DrinkInstructions": "shake it",
-      "userId": 3,
-      "id": 92
-    },
-    {
-      "DrinkName": "drink name",
-      "DrinkLiquor": "",
-      "DrinkMixer": "any mixer",
-      "DrinkInstructions": "shake it",
-      "userId": 3,
-      "id": 93
-    },
-    {
-      "DrinkName": "drink name",
-      "DrinkLiquor": "",
-      "DrinkMixer": "any mixer",
-      "DrinkInstructions": "shake it",
-      "userId": 3,
-      "id": 94
-    },
-    {
       "DrinkName": "drink name",
       "DrinkLiquor": "",
       "DrinkMixer": "any mixer",
       "DrinkInstructions": "shake itttt",
       "userId": 3,
       "id": 95
-    },
-    {
-      "userId": 3,
-      "id": 96
-    },
-    {
-      "userId": 3,
-      "id": 97
-    },
-    {
-      "userId": 3,
-      "id": 98
-    },
-    {
-      "userId": 3,
-      "id": 99
-    },
-    {
-      "userId": 3,
-      "id": 100
-    },
-    {
-      "userId": 3,
-      "id": 101
     },
     {
       "DrinkName": "ellie's drink",
