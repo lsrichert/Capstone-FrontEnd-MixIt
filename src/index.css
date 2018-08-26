@@ -37,23 +37,13 @@ body {
   background-attachment: fixed;
 }
 
-/* #drink-name {
-  margin: 3px;
-  text-align: left;
-  padding: 15px;
-  font-family: 'PT Sans', sans-serif;
-  font-size: 20px;
-
-} */
 /* styling for 'MixIt' at top of main page */
 #header-title {
   text-align: center;
   font-size: 11em;
-  /* background-color: #A29587; */
   max-width: 2em center;
   font-family: 'Kaushan Script', cursive;
   margin-top: -2%;
-  /* border-radius: 50%; */
   background-attachment: fixed;
 }
 
@@ -97,31 +87,31 @@ body {
   z-index: 1;
 }
 
-/* register user styling on login page */
-.register {
-  font-size: 25px;
-  font-weight: bold;
-  margin-top: 550px;
-  margin-left: 550px;
-  color: whitesmoke;
-  /* background-color: #A29587; */
-  max-width: 28%;
-}
-
 /* login user styling on login page */
 .login {
   font-size: 25px;
   font-weight: bold;
   color: whitesmoke;
-  margin-top: 165px;
-  margin-left: 550px;
-  /* background-color: #A29587; */
+  margin-top: 10px;
+  margin-left: 70px;
   max-width: 28%;
+  position: fixed;
 }
+
+/* register user styling on login page */
+.register {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 500px;
+  margin-left: 70px;
+  color: whitesmoke;
+  max-width: 28%;
+  position: fixed;
+}
+
 
 .login-header {
   position: fixed;
-  /* background-color: #C7C7C8; */
   max-height: 10em;
   width: 100%;
   z-index: 2;
@@ -149,40 +139,30 @@ body {
   max-width: 5em center;
   margin-top: 0%;
   background-attachment: fixed;
-  /* z-index: 3; */
 }
 
 .login-form {
   width: 300px;
   padding: 5px;
-  margin-left: 550px;
-  /* background-color: #A29587; */
+  margin-left: 10px;
+  z-index: 2;
 }
 
 .register-form {
   width: 300px;
   padding: 5px;
-  margin-left: 550px;
-  /* background-color: #A29587; */
+  margin-left: 10px;
+  z-index: 2;
 }
-
 
 
 .drink {
   padding: 50px;
-  /* margin-left: 3%; */
   margin-top: 12%;
   
 }
 
-/* .card {
-  width: 30em;
-  background-color: #BBBB97;
-  padding: 10px;
-  grid-row-start: 6;
-  grid-column-start: 6;
-  z-index: 1
-} */
+
 
 
 

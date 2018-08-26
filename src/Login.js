@@ -88,69 +88,67 @@ export default class Login extends Component {
             
 
             <div id="loginRegister">
-            <form onSubmit={this.handleLogin}>
-            <div className="login-header">
+                        <div className="login-header">
+
             <h1 className="welcome">Welcome To MixIt</h1>
                     <h4 id="app-description-login">The Cocktail Recipe Keeper</h4>
-                {/* Mix It Twice */}
-            <div className="login">Please Sign In</div>
-            <Form>
+                    <form onSubmit={this.handleLogin}>
+
+                    <div className="login">
+
+            
+
             <FormGroup className="login-form">
-            {/* <Label htmlFor="inputUserName">
-            UserName:
-            </Label> */}
+            <Form>Please Sign In
             <Input onChange={this.handleFieldChange} type="text"
             id="userName"
             placeholder="Enter Username"
             required="" autoFocus="" />
-            {/* <Label htmlFor="inputEmail">
-            Email:
-            </Label> */}
+            
             <Input onChange={this.handleFieldChange} type="email"
             id="email"
             placeholder="Enter Email"
             required="" autoFocus="" />
-            <Button type ="submit" color="secondary" onClick={() => window.location.reload()
-            }>
+            <Button type ="submit" color="secondary" onClick={() => window.location.reload()}>
             Log In
             </Button> 
-            </FormGroup>
+           
             </Form>
+             </FormGroup>
             </div>
-            
             </form>
+            </div>
+
 
             <br></br>
 
             
             <form onSubmit={this.handleRegister}>
-            <div className="register">New Users</div>
-            {/* <Label htmlFor="inputUserName">
-            UserName:
-            </Label> */}
-            <Form>
+
+            <div className="register">
+
+
                 <FormGroup className="register-form">
-            
+                <Form>New Users
+
             <Input onChange={this.handleRegisterUserNameChange} type="text"
             id="userName"
             placeholder="Register Username"
             required="" autoFocus="" />
-            {/* <Label htmlFor="inputEmail">
-            Email:
-            </Label> */}
+            
 
             <Input onChange={this.handleRegisterEmailChange} type="email"
             id="email"
             placeholder="Register Email"
             required="" autoFocus="" />
-
-            
             <Button type ="submit" color="secondary" onClick={() => window.location.reload()}>
             Register New User
             </Button>
             
-            </FormGroup>
             </Form>
+            </FormGroup>
+
+            </div>
             </form>
 
             </div>
