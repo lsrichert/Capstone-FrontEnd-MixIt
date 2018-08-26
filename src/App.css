@@ -27,4 +27,8 @@
   to { transform: rotate(360deg); }
 }
 
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
 
