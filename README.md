@@ -1,7 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+![image](https://user-images.githubusercontent.com/39492964/45660149-fb727380-babc-11e8-9de6-ca5970e835a9.png)
+![image](https://user-images.githubusercontent.com/39492964/45660152-04634500-babd-11e8-9d46-0cc8b49d3106.png)
+![image](https://user-images.githubusercontent.com/39492964/45660158-0cbb8000-babd-11e8-934c-f01c49e21c94.png)
+
 
 ## Table of Contents
 
