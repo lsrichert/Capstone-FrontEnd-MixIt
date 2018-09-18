@@ -1,4 +1,4 @@
-MixIt is an app that enables the home bartender to save and edit cocktail recipes. A user can register a username and login to begin adding recipes. From there, the user can edit and delete recipes.
+#h1 MixIt is an app that enables the home bartender to save and edit cocktail recipes. A user can register a username and login to begin adding recipes. From there, the user can edit and delete recipes.
 
 MixIt was my front-end capstone during my six month program at Nashville Software School.
 
