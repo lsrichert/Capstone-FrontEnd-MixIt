@@ -1,4 +1,4 @@
-MIXIT
+# MIXIT - NSS FrontEnd Capstone
 
 MixIt is an app that enables the home bartender to save and edit cocktail recipes. A user can register a username and login to begin adding recipes. From there, the user can edit and delete recipes.
 
